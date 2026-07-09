@@ -825,3 +825,81 @@ body {
     min-width: 620px;
   }
 }
+
+/* FIX FINAL MÓVIL OCTAPET */
+@media (max-width: 640px) {
+  .hero-header {
+    display: flex;
+    flex-direction: column;
+    min-height: auto !important;
+    overflow: visible;
+  }
+
+  .header-image {
+    width: 100%;
+    height: auto !important;
+    min-height: unset !important;
+    object-fit: contain !important;
+    display: block;
+  }
+
+  .corner-menu {
+    position: static !important;
+    left: auto !important;
+    right: auto !important;
+    bottom: auto !important;
+    width: 92%;
+    margin: 14px auto 0;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+    border-radius: 18px;
+    padding: 14px;
+  }
+
+  .corner-menu a {
+    font-size: 0.78rem !important;
+    text-align: center;
+  }
+
+  .section {
+    padding: 48px 0;
+  }
+
+  .product-grid,
+  .pack-grid,
+  .about-grid,
+  .contact-grid,
+  .product-hero-grid,
+  .modo-grid {
+    grid-template-columns: 1fr !important;
+  }
+
+  .product-hero-text h1 {
+    font-size: 2.2rem !important;
+  }
+
+  .section-heading h2,
+  .about-grid h2,
+  .contact-box h2 {
+    font-size: 1.9rem !important;
+  }
+
+  .product-card,
+  .pack-card,
+  .contact-box,
+  .about-box {
+    padding: 20px;
+  }
+
+  .product-photo,
+  .product-hero-image img {
+    max-height: 320px;
+    height: auto !important;
+  }
+
+  .pack-photo,
+  .visual-card-image {
+    height: 240px;
+  }
+}
