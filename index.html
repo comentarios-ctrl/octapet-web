@@ -8,7 +8,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css?v=10" />
+  <link rel="stylesheet" href="styles.css" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
 </head>
 
@@ -25,44 +25,180 @@
 </header>
 <main>
 
-  <section id="productos" class="section">
-    <div class="container">
-      <div class="section-heading">
-        <p class="eyebrow">Nuestros productos</p>
-        <h2>Una línea pensada para distintas necesidades</h2>
-        <p>Comenzamos con una línea enfocada en soporte articular y cuidado de la piel, y próximamente seguiremos ampliando Octapet con nuevas fórmulas para perros y gatos.</p>
+<section id="productos" class="section products-section">
+  <div class="container">
+
+    <div class="section-heading products-main-heading">
+      <p class="eyebrow">Nuestros productos</p>
+      <h2>Una colección creada para cuidarlos por dentro y por fuera</h2>
+      <p>
+        Fórmulas desarrolladas a partir de necesidades reales para acompañar
+        la movilidad, la nutrición, la piel, el pelaje y el bienestar diario
+        de perros y gatos.
+      </p>
+    </div>
+
+    <!-- COLECCIÓN CANINA -->
+    <div class="collection-banner collection-banner-dogs">
+      <span class="collection-icon">
+        <i class="fa-solid fa-dog"></i>
+      </span>
+
+      <div class="collection-copy">
+        <p class="collection-label">Octapet presenta</p>
+        <h3>Colección Canina</h3>
+        <p>Movilidad · Higiene · Nutrición · Bienestar</p>
       </div>
+    </div>
 
-      <div class="product-grid">
-  <a href="articular-perros.html" class="product-card product-link">
-    <img src="img/articular-perros.png" alt="Soporte articular para perros" class="product-photo">
-    <span class="product-tag">Disponible pronto</span>
-    <h3>Soporte articular para perros</h3>
-    <p>Fórmula en polvo para acompañar movilidad, confort y bienestar articular.</p>
-  </a>
+    <div class="product-grid product-catalog-grid">
 
-  <a href="shampoo-piel-seca.html" class="product-card product-link">
-    <img src="img/shampoo-piel-seca.png" alt="Shampoo para piel seca" class="product-photo">
-    <span class="product-tag">Disponible pronto</span>
-    <h3>Shampoo para piel seca</h3>
-    <p>Cuidado suave para perros con piel seca, sensible o con tendencia a descamación.</p>
-  </a>
+      <a href="articular-perros.html" class="product-card product-link catalog-card">
+        <div class="product-image-space">
+          <img
+            src="img/articular-perros.png"
+            alt="Soporte articular para perros"
+            class="product-photo"
+          >
+        </div>
+        <span class="product-species">Perros</span>
+        <h3>Soporte Articular</h3>
+        <p>
+          Fórmula en polvo para acompañar la movilidad, el confort y el
+          bienestar articular diario.
+        </p>
+        <span class="product-action">Conocer producto →</span>
+      </a>
 
-  <a href="control-peso.html" class="product-card product-link">
-    <img src="img/control-peso.png" alt="Soporte para control de peso" class="product-photo">
-    <span class="product-tag">Próximamente</span>
-    <h3>Soporte para control de peso</h3>
-    <p>Suplemento pensado para perros y gatos con tendencia al sobrepeso.</p>
-  </a>
+      <a href="shampoo-piel-seca.html" class="product-card product-link catalog-card">
+        <div class="product-image-space">
+          <img
+            src="img/shampoo-hidratante.png"
+            alt="Shampoo hidratante para perros"
+            class="product-photo"
+          >
+        </div>
+        <span class="product-species">Perros</span>
+        <h3>Shampoo Hidratante</h3>
+        <p>
+          Limpieza suave para perros con piel seca, sensible o con tendencia
+          a descamación.
+        </p>
+        <span class="product-action">Conocer producto →</span>
+      </a>
 
-  <a href="articular-gatos.html" class="product-card product-link">
-    <img src="img/articular-gatos.png" alt="Soporte articular para gatos" class="product-photo">
-    <span class="product-tag">Próximamente</span>
-    <h3>Soporte articular para gatos</h3>
-    <p>Fórmula adaptada para acompañar movilidad y bienestar articular en gatos adultos.</p>
-  </a>
-</div>
-  </section>
+      <a href="limpieza-efectiva.html" class="product-card product-link catalog-card">
+        <div class="product-image-space product-placeholder">
+          <span>Imagen del producto</span>
+        </div>
+        <span class="product-species">Perros</span>
+        <h3>Limpieza Efectiva</h3>
+        <p>
+          Shampoo de limpieza práctica y accesible para mantener el pelaje
+          limpio y fresco.
+        </p>
+        <span class="product-action">Conocer producto →</span>
+      </a>
+
+      <a href="acondicionador-perros.html" class="product-card product-link catalog-card">
+        <div class="product-image-space product-placeholder">
+          <span>Imagen del producto</span>
+        </div>
+        <span class="product-species">Perros</span>
+        <h3>Acondicionador Hidratante</h3>
+        <p>
+          Ayuda a mantener el pelaje suave, brillante, manejable y fácil de
+          cepillar.
+        </p>
+        <span class="product-action">Conocer producto →</span>
+      </a>
+
+      <a href="control-peso-perros.html" class="product-card product-link catalog-card">
+        <div class="product-image-space product-placeholder">
+          <span>Imagen del producto</span>
+        </div>
+        <span class="product-species">Perros</span>
+        <h3>Control de Peso</h3>
+        <p>
+          Complemento nutricional pensado para perros con tendencia al
+          sobrepeso.
+        </p>
+        <span class="product-action">Conocer producto →</span>
+      </a>
+
+      <article class="product-card catalog-card future-product">
+        <div class="product-image-space product-placeholder">
+          <span>Imagen futura</span>
+        </div>
+        <span class="product-species">En desarrollo</span>
+        <h3>Salud Visual</h3>
+        <p>
+          Fórmula en desarrollo para acompañar el bienestar ocular y el
+          envejecimiento saludable.
+        </p>
+        <span class="product-action">Próximamente</span>
+      </article>
+
+    </div>
+
+    <!-- COLECCIÓN FELINA -->
+    <div class="collection-banner collection-banner-cats">
+      <span class="collection-icon">
+        <i class="fa-solid fa-cat"></i>
+      </span>
+
+      <div class="collection-copy">
+        <p class="collection-label">Octapet presenta</p>
+        <h3>Colección Felina</h3>
+        <p>Nutrición · Higiene · Piel · Pelaje</p>
+      </div>
+    </div>
+
+    <div class="product-grid product-catalog-grid product-grid-cats">
+
+      <a href="shampoo-gatos.html" class="product-card product-link catalog-card">
+        <div class="product-image-space product-placeholder">
+          <span>Imagen del producto</span>
+        </div>
+        <span class="product-species">Gatos</span>
+        <h3>Shampoo para Gatos</h3>
+        <p>
+          Limpieza suave formulada especialmente para la piel y el pelaje
+          felino.
+        </p>
+        <span class="product-action">Conocer producto →</span>
+      </a>
+
+      <a href="vitalidad-felina.html" class="product-card product-link catalog-card">
+        <div class="product-image-space product-placeholder">
+          <span>Imagen del producto</span>
+        </div>
+        <span class="product-species">Gatos</span>
+        <h3>Vitalidad Felina</h3>
+        <p>
+          Suplemento diario con taurina, omega 3 y nutrientes seleccionados
+          para apoyar su bienestar, piel y pelaje.
+        </p>
+        <span class="product-action">Conocer producto →</span>
+      </a>
+
+      <a href="control-peso-gatos.html" class="product-card product-link catalog-card">
+        <div class="product-image-space product-placeholder">
+          <span>Imagen del producto</span>
+        </div>
+        <span class="product-species">Gatos</span>
+        <h3>Control de Peso</h3>
+        <p>
+          Complemento nutricional pensado para apoyar el manejo del peso
+          corporal en gatos.
+        </p>
+        <span class="product-action">Conocer producto →</span>
+      </a>
+
+    </div>
+
+  </div>
+</section>
 
   <section id="manada" class="section section-alt">
     <div class="container">
