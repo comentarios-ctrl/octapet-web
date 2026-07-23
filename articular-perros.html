@@ -1,0 +1,1393 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <meta name="theme-color" content="#0b5fad" />
+  <title>Soporte Articular para Perros | Octapet</title>
+  <meta name="description" content="Soporte articular Octapet para perros senior, activos y razas grandes. Conoce cómo funciona, qué contiene y cuánto darle." />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+  <style>
+    :root{
+      --blue:#0b63b5;
+      --blue-dark:#063f75;
+      --blue-soft:#eaf5fd;
+      --blue-pale:#f5fbff;
+      --ink:#152233;
+      --muted:#68788a;
+      --line:#d8e6f0;
+      --white:#fff;
+      --green:#2f8050;
+      --green-soft:#eef8f1;
+      --orange:#bf5d31;
+      --orange-soft:#fff1e8;
+      --gold:#9a7719;
+      --gold-soft:#fff7d8;
+      --shadow:0 18px 48px rgba(20,65,95,.11);
+      --radius:26px;
+      --max:1180px;
+    }
+
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{
+      margin:0;
+      font-family:"Montserrat",sans-serif;
+      color:var(--ink);
+      background:#fff;
+      line-height:1.55;
+    }
+    img{display:block;max-width:100%}
+    a{color:inherit;text-decoration:none}
+    button,select{font:inherit}
+    .container{width:min(calc(100% - 28px),var(--max));margin-inline:auto}
+    .section{padding:72px 0}
+    .section-soft{background:var(--blue-pale)}
+    .eyebrow{
+      display:inline-flex;
+      align-items:center;
+      gap:8px;
+      margin-bottom:10px;
+      color:var(--blue);
+      font-size:.72rem;
+      font-weight:900;
+      letter-spacing:.09em;
+      text-transform:uppercase;
+    }
+    h1,h2,h3,p{margin-top:0}
+    h1{
+      font-size:clamp(2.5rem,10vw,5.4rem);
+      line-height:1.01;
+      letter-spacing:-.055em;
+      margin-bottom:20px;
+    }
+    h2{
+      font-size:clamp(1.9rem,7vw,3.1rem);
+      line-height:1.08;
+      letter-spacing:-.04em;
+      margin-bottom:16px;
+    }
+    h3{font-size:1.05rem;line-height:1.25;margin-bottom:7px}
+    .lead{font-size:1rem;color:var(--muted)}
+    .section-heading{max-width:760px;margin-bottom:30px}
+    .section-heading.center{text-align:center;margin-inline:auto}
+    .btn{
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+      gap:10px;
+      min-height:52px;
+      padding:14px 22px;
+      border-radius:999px;
+      border:0;
+      background:var(--blue);
+      color:#fff;
+      font-weight:900;
+      cursor:pointer;
+      box-shadow:0 12px 26px rgba(11,99,181,.25);
+    }
+    .btn-light{background:#fff;color:var(--blue-dark);box-shadow:none}
+    .chip-row{display:flex;flex-wrap:wrap;gap:9px}
+    .chip{
+      padding:8px 11px;
+      border:1px solid rgba(255,255,255,.28);
+      border-radius:999px;
+      color:#fff;
+      background:rgba(255,255,255,.10);
+      font-size:.72rem;
+      font-weight:800;
+      backdrop-filter:blur(8px);
+    }
+
+    /* NAV + HERO */
+    .hero{
+      position:relative;
+      overflow:hidden;
+      color:#fff;
+      background:
+        linear-gradient(90deg,rgba(4,20,32,.86) 0%,rgba(4,20,32,.70) 42%,rgba(4,20,32,.26) 70%,rgba(4,20,32,.15) 100%),
+        url("img/coquis-corriendo-hero.jpg") center/cover no-repeat;
+    }
+    .hero::after{
+      content:"";
+      position:absolute;
+      inset:auto 0 0;
+      height:180px;
+      background:linear-gradient(180deg,transparent,rgba(3,17,28,.42));
+      pointer-events:none;
+    }
+    .topbar{
+      position:relative;
+      z-index:3;
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:20px;
+      padding:18px 0;
+    }
+    .brand{
+      display:flex;
+      align-items:center;
+      gap:10px;
+      font-weight:900;
+      letter-spacing:.04em;
+    }
+    .brand-mark{
+      display:grid;
+      width:40px;
+      height:40px;
+      place-items:center;
+      border-radius:50%;
+      background:#fff;
+      color:var(--blue-dark);
+    }
+    .nav{display:none;gap:26px;font-size:.86rem;font-weight:700}
+    .hero-grid{
+      position:relative;
+      z-index:2;
+      display:grid;
+      gap:34px;
+      padding:74px 0 72px;
+    }
+    .hero-copy{max-width:640px}
+    .hero-copy .eyebrow{
+      padding:7px 11px;
+      border-radius:999px;
+      color:#fff;
+      background:var(--blue);
+    }
+    .hero-copy p{max-width:590px;color:#e5edf3}
+    .hero-actions{display:flex;flex-wrap:wrap;gap:12px;margin-top:26px}
+    .hero-icons{
+      display:grid;
+      grid-template-columns:repeat(5,1fr);
+      gap:12px;
+      margin-top:28px;
+    }
+    .hero-icon{
+      text-align:center;
+      color:#d7e9f5;
+      font-size:.68rem;
+      font-weight:800;
+    }
+    .hero-icon span{
+      display:grid;
+      width:48px;
+      height:48px;
+      place-items:center;
+      margin:0 auto 7px;
+      border:1px solid rgba(255,255,255,.35);
+      border-radius:50%;
+      background:rgba(3,24,40,.35);
+      color:#8fd0fb;
+      font-size:1rem;
+    }
+    .product-stage{
+      position:relative;
+      min-height:390px;
+    }
+    .product-pack{
+      position:absolute;
+      right:0;
+      bottom:0;
+      width:min(68%,380px);
+      filter:drop-shadow(0 22px 30px rgba(0,0,0,.22));
+    }
+    .product-scoop{
+      position:absolute;
+      right:5%;
+      bottom:0;
+      width:min(34%,190px);
+      transform:rotate(-7deg);
+      filter:drop-shadow(0 16px 24px rgba(0,0,0,.22));
+    }
+
+    /* TARGET CARDS */
+    .audience-grid{display:grid;gap:16px}
+    .audience-card{
+      overflow:hidden;
+      border:1px solid var(--line);
+      border-radius:22px;
+      background:#fff;
+      box-shadow:var(--shadow);
+    }
+    .audience-card img{
+      width:100%;
+      height:220px;
+      object-fit:cover;
+    }
+    .audience-copy{padding:18px}
+    .audience-copy p{margin:0;color:var(--muted);font-size:.84rem}
+    .audience-icon{
+      display:grid;
+      width:40px;
+      height:40px;
+      place-items:center;
+      margin-top:-38px;
+      margin-bottom:10px;
+      border:4px solid #fff;
+      border-radius:50%;
+      background:var(--blue);
+      color:#fff;
+      position:relative;
+      z-index:2;
+    }
+
+    /* PROBLEM FLOW */
+    .problem-band{
+      padding:28px;
+      border-radius:28px;
+      background:linear-gradient(90deg,#edf7fd,#f7fbfe);
+      border:1px solid var(--line);
+    }
+    .problem-layout{display:grid;gap:28px}
+    .problem-intro{max-width:260px}
+    .problem-steps{display:grid;gap:18px}
+    .problem-step{
+      position:relative;
+      display:grid;
+      grid-template-columns:58px 1fr;
+      gap:14px;
+      align-items:center;
+    }
+    .problem-step:not(:last-child)::after{
+      content:"";
+      position:absolute;
+      left:28px;
+      bottom:-18px;
+      width:2px;
+      height:18px;
+      background:linear-gradient(var(--blue),var(--orange));
+    }
+    .problem-step img{
+      width:58px;
+      height:58px;
+      object-fit:cover;
+      border-radius:50%;
+      border:3px solid #fff;
+      box-shadow:0 10px 20px rgba(20,69,105,.10);
+    }
+    .problem-step p{margin:0;color:var(--muted);font-size:.82rem}
+
+    /* ACTIONS */
+    .action-grid{display:grid;gap:16px}
+    .action-card{
+      padding:20px;
+      border:1px solid var(--line);
+      border-radius:22px;
+      background:#fff;
+      text-align:center;
+      box-shadow:0 10px 28px rgba(20,69,105,.06);
+    }
+    .action-icon{
+      display:grid;
+      width:58px;
+      height:58px;
+      place-items:center;
+      margin:0 auto 15px;
+      border-radius:50%;
+      color:var(--blue);
+      background:var(--blue-soft);
+      font-size:1.25rem;
+    }
+    .action-card:nth-child(2) .action-icon{color:var(--orange);background:var(--orange-soft)}
+    .action-card:nth-child(3) .action-icon{color:var(--orange);background:var(--orange-soft)}
+    .action-card:nth-child(4) .action-icon{color:var(--green);background:var(--green-soft)}
+    .action-card:nth-child(5) .action-icon{color:var(--gold);background:var(--gold-soft)}
+    .action-card p{margin:0;color:var(--muted);font-size:.82rem}
+
+    /* SCOOP SECTION */
+    .scoop-layout{
+      display:grid;
+      gap:22px;
+      padding:22px;
+      border:1px solid var(--line);
+      border-radius:30px;
+      background:linear-gradient(145deg,#f7fbfe,#fff);
+      box-shadow:var(--shadow);
+    }
+    .scoop-photo{
+      display:grid;
+      align-content:center;
+      justify-items:center;
+      min-height:320px;
+      padding:24px;
+      border-radius:24px;
+      background:
+        radial-gradient(circle at 50% 45%,rgba(11,99,181,.10),transparent 42%),
+        #eef8fe;
+      text-align:center;
+    }
+    .scoop-photo img{
+      width:min(100%,420px);
+      filter:drop-shadow(0 22px 28px rgba(15,63,95,.18));
+    }
+    .scoop-photo strong{display:block;margin-top:10px;font-size:1.15rem}
+    .scoop-photo span{color:var(--muted);font-size:.82rem}
+    .scoop-groups{display:grid;gap:12px}
+    .scoop-group{
+      padding:16px;
+      border:1px solid var(--line);
+      border-radius:18px;
+      background:#fff;
+    }
+    .scoop-group-head{
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:12px;
+      margin-bottom:11px;
+    }
+    .scoop-group-title{
+      display:flex;
+      align-items:center;
+      gap:10px;
+      font-weight:900;
+    }
+    .scoop-group-icon{
+      display:grid;
+      width:38px;
+      height:38px;
+      place-items:center;
+      border-radius:12px;
+      background:var(--blue-soft);
+      color:var(--blue);
+    }
+    .scoop-group:nth-child(2) .scoop-group-icon{color:var(--orange);background:var(--orange-soft)}
+    .scoop-group:nth-child(3) .scoop-group-icon{color:var(--green);background:var(--green-soft)}
+    .scoop-group:nth-child(4) .scoop-group-icon{color:var(--gold);background:var(--gold-soft)}
+    .scoop-total{
+      padding:6px 9px;
+      border-radius:999px;
+      background:var(--blue-soft);
+      color:var(--blue-dark);
+      font-size:.7rem;
+      font-weight:900;
+      white-space:nowrap;
+    }
+    .scoop-ingredients{display:flex;flex-wrap:wrap;gap:8px}
+    .scoop-ingredient{
+      padding:8px 10px;
+      border-radius:12px;
+      background:#f6f9fb;
+      color:var(--muted);
+      font-size:.76rem;
+    }
+    .scoop-ingredient strong{color:var(--ink)}
+    .support-strip{
+      margin-top:12px;
+      padding:15px;
+      border-radius:17px;
+      background:var(--blue-pale);
+    }
+    .support-strip h3{margin-bottom:6px}
+    .support-strip p{margin:0 0 10px;color:var(--muted);font-size:.8rem}
+    .support-chips{display:flex;flex-wrap:wrap;gap:8px}
+    .support-chips span{
+      padding:7px 9px;
+      border-radius:999px;
+      background:#fff;
+      color:var(--blue-dark);
+      font-size:.7rem;
+      font-weight:800;
+    }
+
+    /* DOSAGE + COMPARISON */
+    .split-grid{display:grid;gap:20px}
+    .dose-box{
+      padding:24px;
+      border-radius:24px;
+      background:linear-gradient(145deg,#edf7fd,#fff);
+      border:1px solid var(--line);
+    }
+    .dose-select{
+      width:100%;
+      min-height:52px;
+      padding:12px 14px;
+      border:1px solid var(--line);
+      border-radius:14px;
+      background:#fff;
+      font-weight:800;
+    }
+    .dose-main{
+      margin:20px 0;
+      padding:20px;
+      border-radius:18px;
+      background:#fff;
+      text-align:center;
+    }
+    .dose-main strong{display:block;color:var(--blue);font-size:2.2rem}
+    .dose-stats{display:grid;grid-template-columns:repeat(3,1fr);gap:10px}
+    .dose-stat{
+      padding:12px;
+      border-radius:16px;
+      background:#fff;
+      text-align:center;
+    }
+    .dose-stat span{display:block;color:var(--muted);font-size:.67rem}
+    .dose-stat strong{display:block;margin-top:4px;font-size:.9rem}
+    .compare-box{
+      padding:24px;
+      border-radius:24px;
+      border:1px solid var(--line);
+      background:#fff;
+    }
+    .compare-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:18px}
+    .compare-card{
+      padding:18px;
+      border-radius:18px;
+      background:#f6f8fa;
+    }
+    .compare-card.featured{color:#fff;background:var(--blue)}
+    .compare-list{display:grid;gap:10px;margin-top:14px}
+    .compare-item{display:flex;gap:9px;font-size:.82rem}
+
+    /* STORY + CTA */
+    .story-grid{display:grid;gap:20px}
+    .story-media{
+      overflow:hidden;
+      border-radius:24px;
+      box-shadow:var(--shadow);
+      background:#0d1620;
+    }
+    .story-media video{
+      display:block;
+      width:100%;
+      aspect-ratio:16/9;
+      object-fit:cover;
+    }
+    .story-copy{
+      padding:26px;
+      border-radius:24px;
+      background:linear-gradient(145deg,#edf7fd,#fff);
+      border:1px solid var(--line);
+    }
+    .cta{
+      padding:32px 0;
+      color:#fff;
+      background:linear-gradient(135deg,var(--blue-dark),var(--blue));
+    }
+    .cta-inner{
+      display:grid;
+      gap:20px;
+      align-items:center;
+    }
+    .cta h2{margin-bottom:8px}
+    .cta p{margin:0;color:#dceefa}
+    footer{
+      padding:22px 0;
+      background:var(--blue-dark);
+      color:#cce3f2;
+      text-align:center;
+      font-size:.8rem;
+    }
+
+    .reveal{opacity:0;transform:translateY(18px);transition:.55s ease}
+    .reveal.visible{opacity:1;transform:none}
+
+    @media(min-width:760px){
+      .container{width:min(calc(100% - 48px),var(--max))}
+      .section{padding:90px 0}
+      .nav{display:flex}
+      .hero-grid{grid-template-columns:1.05fr .95fr;align-items:center;padding:95px 0 88px}
+      .audience-grid{grid-template-columns:repeat(2,1fr)}
+      .problem-layout{grid-template-columns:250px 1fr;align-items:center}
+      .problem-steps{grid-template-columns:repeat(5,1fr)}
+      .problem-step{
+        grid-template-columns:1fr;
+        text-align:center;
+      }
+      .problem-step:not(:last-child)::after{
+        left:auto;
+        right:-18px;
+        top:28px;
+        bottom:auto;
+        width:36px;
+        height:2px;
+      }
+      .problem-step img{margin-inline:auto}
+      .action-grid{grid-template-columns:repeat(5,1fr)}
+      .scoop-layout{grid-template-columns:.88fr 1.12fr;align-items:stretch;padding:28px}
+      .scoop-groups{grid-template-columns:repeat(2,1fr)}
+      .split-grid{grid-template-columns:.9fr 1.1fr}
+      .story-grid{grid-template-columns:1fr 1fr;align-items:center}
+      .cta-inner{grid-template-columns:1fr auto}
+    }
+
+    @media(min-width:1020px){
+      .audience-grid{grid-template-columns:repeat(4,1fr)}
+    }
+
+    @media(max-width:560px){
+      .hero-icons{grid-template-columns:repeat(3,1fr)}
+      .product-stage{min-height:310px}
+      .product-pack{width:74%}
+      .product-scoop{width:38%}
+      .compare-grid{grid-template-columns:1fr}
+      .dose-stats{grid-template-columns:1fr}
+    }
+
+    @media(prefers-reduced-motion:reduce){
+      html{scroll-behavior:auto}
+      .reveal{opacity:1;transform:none;transition:none}
+    }
+  
+    /* HERO APROBADO */
+    .hero{
+      position:relative;
+      overflow:hidden;
+      min-height:720px;
+      color:#fff;
+      background:
+        linear-gradient(90deg,rgba(2,15,25,.86) 0%,rgba(2,15,25,.70) 38%,rgba(2,15,25,.28) 68%,rgba(2,15,25,.10) 100%),
+        url("img/coquis-corriendo-hero.jpg") center/cover no-repeat;
+    }
+    .hero::after{
+      content:"";
+      position:absolute;
+      inset:auto 0 0;
+      height:160px;
+      background:linear-gradient(180deg,transparent,rgba(0,0,0,.38));
+      pointer-events:none;
+    }
+    .topbar{
+      position:relative;
+      z-index:5;
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:20px;
+      padding:18px 0;
+    }
+    .brand{
+      display:flex;
+      align-items:center;
+      gap:10px;
+      font-weight:900;
+      letter-spacing:.04em;
+    }
+    .brand-mark{
+      display:grid;
+      width:42px;
+      height:42px;
+      place-items:center;
+      border-radius:50%;
+      background:#fff;
+      color:var(--blue-dark);
+    }
+    .nav{display:none;gap:28px;font-size:.85rem;font-weight:700}
+    .hero-grid{
+      position:relative;
+      z-index:3;
+      display:grid;
+      gap:34px;
+      padding:84px 0 78px;
+    }
+    .hero-copy{max-width:640px}
+    .hero-copy .eyebrow{
+      padding:7px 12px;
+      border-radius:999px;
+      color:#fff;
+      background:var(--blue);
+    }
+    .hero-copy h1{max-width:650px}
+    .hero-copy p{max-width:570px;color:#e7eef4}
+    .hero-benefits{
+      display:grid;
+      grid-template-columns:repeat(3,1fr);
+      gap:12px;
+      margin-top:28px;
+      max-width:560px;
+    }
+    .hero-benefit{
+      text-align:center;
+      color:#e7f2f9;
+      font-size:.68rem;
+      font-weight:800;
+    }
+    .hero-benefit span{
+      display:grid;
+      width:52px;
+      height:52px;
+      place-items:center;
+      margin:0 auto 8px;
+      border:1px solid rgba(255,255,255,.38);
+      border-radius:50%;
+      background:rgba(0,0,0,.22);
+      color:#8fd3ff;
+      font-size:1.1rem;
+      backdrop-filter:blur(8px);
+    }
+    .hero-actions{display:flex;flex-wrap:wrap;gap:12px;margin-top:28px}
+    .hero-product-stage{
+      position:relative;
+      min-height:420px;
+    }
+    .hero-product-pack{
+      position:absolute;
+      right:0;
+      bottom:0;
+      width:min(72%,430px);
+      filter:drop-shadow(0 24px 34px rgba(0,0,0,.25));
+    }
+    .hero-product-scoop{
+      position:absolute;
+      right:2%;
+      bottom:0;
+      width:min(38%,220px);
+      transform:rotate(-8deg);
+      filter:drop-shadow(0 18px 25px rgba(0,0,0,.24));
+    }
+
+    .mobility-panel{
+      overflow:hidden;
+      border:1px solid var(--line);
+      border-radius:28px;
+      background:#eef7fd;
+      box-shadow:var(--shadow);
+    }
+    .mobility-panel img{
+      display:block;
+      width:100%;
+      height:auto;
+    }
+
+  
+    @media(min-width:760px){
+      .nav{display:flex}
+      .hero-grid{grid-template-columns:1.05fr .95fr;align-items:center}
+      .hero-benefits{grid-template-columns:repeat(5,1fr)}
+    }
+    @media(max-width:759px){
+      .hero{min-height:auto}
+      .topbar .btn{display:none}
+      .hero-grid{padding:56px 0 54px}
+      .hero-product-stage{min-height:330px}
+      .hero-product-pack{width:78%}
+      .hero-product-scoop{width:42%}
+      .hero-benefits{grid-template-columns:repeat(3,1fr)}
+      .mobility-panel{
+        overflow-x:auto;
+        -webkit-overflow-scrolling:touch;
+      }
+      .mobility-panel img{
+        width:980px;
+        max-width:none;
+      }
+    }
+
+  
+    /* HERO CON BANNER FOTOGRÁFICO Y CONTENIDO HTML */
+    .hero-banner{
+      position:relative;
+      isolation:isolate;
+      min-height:690px;
+      overflow:hidden;
+      color:#fff;
+      background:#07151f;
+    }
+
+    .hero-banner-image{
+      position:absolute;
+      inset:0;
+      z-index:-3;
+      background-image:url("img/hero-articular-octapet.png");
+      background-size:cover;
+      background-position:center center;
+      background-repeat:no-repeat;
+      transform:scale(1.01);
+    }
+
+.hero-banner-overlay{
+    position:absolute;
+    inset:0;
+    z-index:-2;
+    background:
+        linear-gradient(
+            90deg,
+            rgba(2,15,25,.68) 0%,
+            rgba(2,15,25,.50) 20%,
+            rgba(2,15,25,.28) 40%,
+            rgba(2,15,25,.08) 60%,
+            rgba(2,15,25,0) 100%
+        ),
+        linear-gradient(
+            180deg,
+            rgba(0,0,0,.08) 0%,
+            rgba(0,0,0,.02) 55%,
+            rgba(0,0,0,.18) 100%
+        );
+}
+
+    .hero-shell{
+      position:relative;
+      z-index:2;
+    }
+
+    .topbar{
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:24px;
+      padding:18px 0;
+    }
+
+    .brand{
+      display:inline-flex;
+      align-items:center;
+      gap:10px;
+      color:#fff;
+      font-weight:900;
+      letter-spacing:.04em;
+    }
+
+    .brand-mark{
+      display:grid;
+      width:42px;
+      height:42px;
+      place-items:center;
+      border-radius:50%;
+      color:var(--blue-dark);
+      background:#fff;
+    }
+
+    .nav{
+      display:none;
+      align-items:center;
+      gap:28px;
+      color:#fff;
+      font-size:.84rem;
+      font-weight:700;
+    }
+
+    .nav a{
+      transition:opacity .2s ease;
+    }
+
+    .nav a:hover{
+      opacity:.72;
+    }
+
+    .hero-buy{
+      min-height:48px;
+      padding:12px 19px;
+    }
+
+    .hero-banner-content{
+      display:flex;
+      align-items:center;
+      min-height:590px;
+      padding:54px 0 64px;
+    }
+
+    .hero-copy{
+      width:min(100%,620px);
+    }
+
+    .hero-eyebrow{
+      padding:7px 12px;
+      border-radius:999px;
+      color:#fff;
+      background:var(--blue);
+    }
+
+    .hero-copy h1{
+      max-width:600px;
+      margin-bottom:18px;
+      color:#fff;
+      font-size:clamp(2.7rem,5vw,5.2rem);
+      line-height:.98;
+      letter-spacing:-.055em;
+      text-wrap:balance;
+    }
+
+    .hero-copy > p{
+      max-width:560px;
+      margin-bottom:0;
+      color:#e3edf4;
+      font-size:clamp(.92rem,1.25vw,1.08rem);
+    }
+
+    .hero-benefits{
+      display:grid;
+      grid-template-columns:repeat(5,minmax(0,1fr));
+      gap:12px;
+      width:min(100%,560px);
+      margin-top:28px;
+    }
+
+    .hero-benefit{
+      min-width:0;
+      color:#f0f7fb;
+      text-align:center;
+      font-size:.7rem;
+    }
+
+    .hero-benefit span{
+      display:grid;
+      width:50px;
+      height:50px;
+      place-items:center;
+      margin:0 auto 8px;
+      border:1px solid rgba(88,190,255,.8);
+      border-radius:50%;
+      color:#fff;
+      background:rgba(2,19,31,.45);
+      box-shadow:inset 0 0 0 1px rgba(255,255,255,.05);
+      backdrop-filter:blur(8px);
+      transition:transform .2s ease, box-shadow .2s ease;
+    }
+
+    .hero-benefit:hover span{
+      transform:translateY(-3px);
+      box-shadow:0 0 0 6px rgba(77,179,240,.12);
+    }
+
+    .hero-benefit strong{
+      display:block;
+      white-space:nowrap;
+    }
+
+    .hero-actions{
+      display:flex;
+      flex-wrap:wrap;
+      gap:12px;
+      margin-top:28px;
+    }
+
+    .hero-actions .btn-light{
+      color:var(--blue-dark);
+      background:#fff;
+    }
+
+    @media(min-width:820px){
+      .nav{display:flex}
+    }
+
+    @media(max-width:819px){
+      .hero-banner{
+        min-height:760px;
+      }
+
+      .hero-banner-image{
+        position:absolute;
+
+    inset:0;
+
+    z-index:-3;
+
+    background-image:url("img/hero-articular-octapet.png");
+
+    background-size:cover;
+
+    background-position:center;
+
+    background-repeat:no-repeat;
+
+    filter:
+
+        brightness(1.08)
+
+        contrast(1.05)
+
+        saturate(1.08);
+
+    transform:scale(1.01);
+      }
+
+      .hero-banner-overlay{
+        background:
+          linear-gradient(
+            180deg,
+            rgba(2,15,25,.38) 0%,
+            rgba(2,15,25,.30) 29%,
+            rgba(2,15,25,.74) 55%,
+            rgba(2,15,25,.97) 100%
+          );
+      }
+
+      .hero-buy{
+        display:none;
+      }
+
+      .hero-banner-content{
+        align-items:flex-end;
+        min-height:680px;
+        padding:280px 0 46px;
+      }
+
+      .hero-copy{
+        width:100%;
+      }
+
+      .hero-copy h1{
+        max-width:100%;
+        font-size:clamp(2.3rem,11vw,3.8rem);
+      }
+
+      .hero-copy > p{
+        max-width:100%;
+      }
+
+      .hero-benefits{
+        grid-template-columns:repeat(3,1fr);
+        width:100%;
+      }
+    }
+
+    @media(max-width:520px){
+      .topbar{
+        padding:14px 0;
+      }
+
+      .brand-mark{
+        width:38px;
+        height:38px;
+      }
+
+      .hero-banner{
+        min-height:810px;
+      }
+
+      .hero-banner-image{
+        background-position:54% 28%;
+        background-size:auto 430px;
+        background-color:#07151f;
+      }
+
+      .hero-banner-content{
+        min-height:735px;
+        padding-top:310px;
+      }
+
+      .hero-benefit strong{
+        font-size:.63rem;
+      }
+
+      .hero-benefit span{
+        width:46px;
+        height:46px;
+      }
+
+      .hero-actions,
+      .hero-actions .btn{
+        width:100%;
+      }
+    }
+
+  </style>
+</head>
+
+<body>
+  
+  
+  <header class="hero hero-banner">
+    <div class="hero-banner-image" aria-hidden="true"></div>
+    <div class="hero-banner-overlay" aria-hidden="true"></div>
+
+    <div class="container hero-shell">
+      <div class="topbar">
+        <a href="index.html" class="brand">
+          <span class="brand-mark"><i class="fa-solid fa-paw"></i></span>
+          <span>OCTAPET</span>
+        </a>
+
+        <nav class="nav" aria-label="Navegación principal">
+          <a href="index.html#productos">Productos</a>
+          <a href="index.html#manada">La manada</a>
+          <a href="index.html#nosotros">Nosotros</a>
+          <a href="index.html#contacto">Contacto</a>
+        </nav>
+
+        <a class="btn hero-buy" href="#dosis">
+          Comprar ahora
+          <i class="fa-solid fa-cart-shopping"></i>
+        </a>
+      </div>
+
+      <div class="hero-banner-content">
+        <div class="hero-copy reveal">
+          <span class="eyebrow hero-eyebrow">
+            <i class="fa-solid fa-dog"></i>
+            Soporte articular para perros
+          </span>
+
+          <h1>Ayuda a que tu perro siga disfrutando moverse.</h1>
+
+          <p>
+            Fórmula avanzada que trabaja en cinco frentes para apoyar sus
+            articulaciones, confort y energía cada día.
+          </p>
+
+          <div class="hero-benefits" aria-label="Beneficios principales">
+            <div class="hero-benefit">
+              <span><i class="fa-solid fa-bone"></i></span>
+              <strong>Cartílago</strong>
+            </div>
+
+            <div class="hero-benefit">
+              <span><i class="fa-regular fa-face-smile"></i></span>
+              <strong>Confort</strong>
+            </div>
+
+            <div class="hero-benefit">
+              <span><i class="fa-solid fa-droplet"></i></span>
+              <strong>Lubricación</strong>
+            </div>
+
+            <div class="hero-benefit">
+              <span><i class="fa-solid fa-bolt"></i></span>
+              <strong>Energía</strong>
+            </div>
+
+            <div class="hero-benefit">
+              <span><i class="fa-solid fa-shield-halved"></i></span>
+              <strong>Antioxidantes</strong>
+            </div>
+          </div>
+
+          <div class="hero-actions">
+            <a class="btn btn-light" href="#para-quien">
+              Descubre cómo funciona
+              <i class="fa-solid fa-arrow-down"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+
+
+  <main>
+    <section class="section" id="para-quien">
+      <div class="container">
+        <div class="section-heading center reveal">
+          <span class="eyebrow">¿Es para tu perro?</span>
+          <h2>Ideal para perros que necesitan apoyo extra en sus articulaciones.</h2>
+        </div>
+
+        <div class="audience-grid">
+          <article class="audience-card reveal">
+            <img src="img/perrito_viejito.png" alt="Perro senior">
+            <div class="audience-copy">
+              <span class="audience-icon"><i class="fa-solid fa-paw"></i></span>
+              <h3>Perros senior</h3>
+              <p>Empiezan a caminar más lento, les cuesta levantarse o ya no quieren subir escaleras.</p>
+            </div>
+          </article>
+
+          <article class="audience-card reveal">
+            <img src="img/perro_muy_activo.png" alt="Perro muy activo">
+            <div class="audience-copy">
+              <span class="audience-icon"><i class="fa-solid fa-person-running"></i></span>
+              <h3>Perros muy activos</h3>
+              <p>Corren, entrenan, hacen senderismo o realizan ejercicio frecuente.</p>
+            </div>
+          </article>
+
+          <article class="audience-card reveal">
+            <img src="img/perro_raza_grande.png" alt="Perro de raza grande">
+            <div class="audience-copy">
+              <span class="audience-icon"><i class="fa-solid fa-dog"></i></span>
+              <h3>Razas grandes</h3>
+              <p>Su peso y estructura ejercen más presión sobre sus articulaciones.</p>
+            </div>
+          </article>
+
+          <article class="audience-card reveal">
+            <img src="img/croquetas_con_suplemento.png" alt="Croquetas con suplemento">
+            <div class="audience-copy">
+              <span class="audience-icon"><i class="fa-solid fa-bowl-food"></i></span>
+              <h3>Muy fácil de dar</h3>
+              <p>Se mezcla con sus croquetas favoritas. Sin estrés y sin pastillas.</p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    
+    <section class="section section-soft" id="cambios-movilidad">
+      <div class="container">
+        <div class="mobility-panel reveal">
+          <img
+            src="img/historia-movilidad-octapet.png"
+            alt="Señales de cambios en la movilidad de un perro y cómo Octapet ayuda a cuidar sus articulaciones"
+          >
+        </div>
+      </div>
+    </section>
+
+
+    <section class="section">
+      <div class="container">
+        <div class="section-heading center reveal">
+          <span class="eyebrow">Nuestra fórmula trabaja en 5 frentes</span>
+          <h2>Así ayuda Octapet a tu perro</h2>
+        </div>
+
+        <div class="action-grid">
+          <article class="action-card reveal">
+            <span class="action-icon"><i class="fa-solid fa-shield-halved"></i></span>
+            <h3>Protege cartílago y estructura</h3>
+            <p>Ayuda a mantener y proteger el cartílago para una mejor movilidad.</p>
+          </article>
+
+          <article class="action-card reveal">
+            <span class="action-icon"><i class="fa-regular fa-face-smile"></i></span>
+            <h3>Apoya el confort y la flexibilidad</h3>
+            <p>Favorece el bienestar y la comodidad en el movimiento diario.</p>
+          </article>
+
+          <article class="action-card reveal">
+            <span class="action-icon"><i class="fa-solid fa-fire-flame-curved"></i></span>
+            <h3>Respuesta inflamatoria equilibrada</h3>
+            <p>Ayuda a mantener una respuesta natural y saludable.</p>
+          </article>
+
+          <article class="action-card reveal">
+            <span class="action-icon"><i class="fa-solid fa-droplet"></i></span>
+            <h3>Lubricación e integración</h3>
+            <p>Contribuye a la lubricación de la articulación y a integrar la fórmula.</p>
+          </article>
+
+          <article class="action-card reveal">
+            <span class="action-icon"><i class="fa-solid fa-bolt"></i></span>
+            <h3>Energía y protección antioxidante</h3>
+            <p>Aporta energía y ayuda a proteger las células frente al desgaste diario.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-soft" id="scoop">
+      <div class="container">
+        <div class="section-heading center reveal">
+          <span class="eyebrow">¿Qué contiene un scoop?</span>
+          <h2>Al ras = 5 gramos</h2>
+        </div>
+
+        <div class="scoop-layout reveal">
+          <div class="scoop-photo">
+            <img src="img/renders/scoop-dosificacion.png" alt="Scoop dosificador Octapet lleno al ras">
+            <strong>Scoop dosificador incluido</strong>
+            <span>En todas las bolsas</span>
+          </div>
+
+          <div>
+            <div class="scoop-groups">
+              <article class="scoop-group">
+                <div class="scoop-group-head">
+                  <div class="scoop-group-title">
+                    <span class="scoop-group-icon"><i class="fa-solid fa-shield-halved"></i></span>
+                    <span>Cartílago y estructura</span>
+                  </div>
+                  <span class="scoop-total">2,000 mg</span>
+                </div>
+                <div class="scoop-ingredients">
+                  <span class="scoop-ingredient"><strong>MSM</strong> 600 mg</span>
+                  <span class="scoop-ingredient"><strong>Glucosamina</strong> 600 mg</span>
+                  <span class="scoop-ingredient"><strong>PETAGILE®</strong> 500 mg</span>
+                  <span class="scoop-ingredient"><strong>Condroitina</strong> 300 mg</span>
+                </div>
+              </article>
+
+              <article class="scoop-group">
+                <div class="scoop-group-head">
+                  <div class="scoop-group-title">
+                    <span class="scoop-group-icon"><i class="fa-solid fa-fire-flame-curved"></i></span>
+                    <span>Respuesta inflamatoria</span>
+                  </div>
+                  <span class="scoop-total">450 mg</span>
+                </div>
+                <div class="scoop-ingredients">
+                  <span class="scoop-ingredient"><strong>Boswellia</strong> 300 mg</span>
+                  <span class="scoop-ingredient"><strong>Curcumina</strong> 150 mg</span>
+                </div>
+              </article>
+
+              <article class="scoop-group">
+                <div class="scoop-group-head">
+                  <div class="scoop-group-title">
+                    <span class="scoop-group-icon"><i class="fa-solid fa-droplet"></i></span>
+                    <span>Lubricación e integración</span>
+                  </div>
+                  <span class="scoop-total">220 mg</span>
+                </div>
+                <div class="scoop-ingredients">
+                  <span class="scoop-ingredient"><strong>Lecitina</strong> 200 mg</span>
+                  <span class="scoop-ingredient"><strong>Ácido hialurónico</strong> 20 mg</span>
+                </div>
+              </article>
+
+              <article class="scoop-group">
+                <div class="scoop-group-head">
+                  <div class="scoop-group-title">
+                    <span class="scoop-group-icon"><i class="fa-solid fa-bolt"></i></span>
+                    <span>Energía y protección antioxidante</span>
+                  </div>
+                  <span class="scoop-total">410 mg</span>
+                </div>
+                <div class="scoop-ingredients">
+                  <span class="scoop-ingredient"><strong>MCT</strong> 300 mg</span>
+                  <span class="scoop-ingredient"><strong>Vitamina C</strong> 100 mg</span>
+                  <span class="scoop-ingredient"><strong>Vitamina E</strong> 10 mg</span>
+                </div>
+              </article>
+            </div>
+
+            <div class="support-strip">
+              <h3>También incluye</h3>
+              <p>Ingredientes que ayudan a que la mezcla sea uniforme, estable y fácil de dar.</p>
+              <div class="support-chips">
+                <span>Levaduras · 200 mg</span>
+                <span>Harina de arroz · 1,695 mg</span>
+                <span>Dióxido de silicio · 25 mg</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="dosis">
+      <div class="container">
+        <div class="split-grid">
+          <div class="dose-box reveal">
+            <span class="eyebrow">¿Cuánto darle?</span>
+            <h2>Calcula la dosis para tu perro</h2>
+
+            <select id="peso" class="dose-select">
+              <option value="1|150|1 línea">Hasta 5 kg</option>
+              <option value="1.5|100|1½ líneas">5–10 kg</option>
+              <option value="3|50|3 líneas">10–20 kg</option>
+              <option value="5|30|1 scoop al ras">20–30 kg</option>
+              <option value="7.5|20|1½ scoops">Más de 30 kg</option>
+            </select>
+
+            <div class="dose-main">
+              <span>Dosis diaria recomendada</span>
+              <strong id="dailyDose">1 g</strong>
+              <span id="scoopMark">1 línea</span>
+            </div>
+
+            <div class="dose-stats">
+              <div class="dose-stat"><span>Así se ve</span><strong id="doseVisual">1 línea</strong></div>
+              <div class="dose-stat"><span>¿Cuánto dura?</span><strong id="days">150 días</strong></div>
+              <div class="dose-stat"><span>Modo de uso</span><strong>Mezcla con su comida</strong></div>
+            </div>
+          </div>
+
+          <div class="compare-box reveal">
+            <span class="eyebrow">¿Por qué nuestra fórmula es diferente?</span>
+            <h2>No es solo glucosamina y condroitina.</h2>
+
+            <div class="compare-grid">
+              <div class="compare-card">
+                <h3>Suplementos básicos</h3>
+                <div class="compare-list">
+                  <div class="compare-item"><i class="fa-regular fa-circle-check"></i><span>Glucosamina</span></div>
+                  <div class="compare-item"><i class="fa-regular fa-circle-check"></i><span>Condroitina</span></div>
+                </div>
+              </div>
+
+              <div class="compare-card featured">
+                <h3>Octapet Soporte Articular</h3>
+                <div class="compare-list">
+                  <div class="compare-item"><i class="fa-solid fa-circle-check"></i><span>Cartílago y estructura</span></div>
+                  <div class="compare-item"><i class="fa-solid fa-circle-check"></i><span>Confort y flexibilidad</span></div>
+                  <div class="compare-item"><i class="fa-solid fa-circle-check"></i><span>Respuesta inflamatoria</span></div>
+                  <div class="compare-item"><i class="fa-solid fa-circle-check"></i><span>Lubricación e integración</span></div>
+                  <div class="compare-item"><i class="fa-solid fa-circle-check"></i><span>Energía y antioxidantes</span></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-soft">
+      <div class="container">
+        <div class="story-grid">
+          <div class="story-media reveal">
+            <video controls playsinline preload="metadata" poster="img/coquis-poster.jpg">
+              <source src="video/coquis-corriendo.mp4" type="video/mp4">
+              Tu navegador no soporta este video.
+            </video>
+          </div>
+
+          <div class="story-copy reveal">
+            <span class="eyebrow">La historia de Coquis</span>
+            <h2>Inspirado en ella, hecho para todos.</h2>
+            <p class="lead">
+              Coquis nos enseñó que cuidar las articulaciones no es solo para perros viejitos.
+              Con el cuidado adecuado, nuestros perros pueden vivir más años con alegría, energía y movimiento.
+            </p>
+            
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="cta">
+      <div class="container">
+        <div class="cta-inner">
+          <div>
+            <h2>Tu perro todavía tiene muchas aventuras por vivir.</h2>
+            <p>Fórmula multicomponente, práctica y fácil de usar todos los días.</p>
+          </div>
+          <a class="btn btn-light" href="https://www.instagram.com/octapet.mx/" target="_blank" rel="noopener">
+            Quiero probar Octapet <i class="fa-solid fa-cart-shopping"></i>
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">© 2026 Octapet. Todos los derechos reservados.</div>
+  </footer>
+
+  <script>
+    const select = document.getElementById("peso");
+    const dailyDose = document.getElementById("dailyDose");
+    const days = document.getElementById("days");
+    const scoopMark = document.getElementById("scoopMark");
+    const doseVisual = document.getElementById("doseVisual");
+
+    function updateDose(){
+      const [dose,duration,mark] = select.value.split("|");
+      dailyDose.textContent = `${dose} g`;
+      days.textContent = `${duration} días`;
+      scoopMark.textContent = mark;
+      doseVisual.textContent = mark;
+    }
+
+    select.addEventListener("change",updateDose);
+    updateDose();
+
+    const revealItems = document.querySelectorAll(".reveal");
+    if("IntersectionObserver" in window){
+      const observer = new IntersectionObserver((entries)=>{
+        entries.forEach((entry)=>{
+          if(entry.isIntersecting){
+            entry.target.classList.add("visible");
+            observer.unobserve(entry.target);
+          }
+        });
+      },{threshold:.1});
+
+      revealItems.forEach((item)=>observer.observe(item));
+    }else{
+      revealItems.forEach((item)=>item.classList.add("visible"));
+    }
+  </script>
+</body>
+</html>
