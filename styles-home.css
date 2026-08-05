@@ -81,3 +81,33 @@
     height:205px;
   }
 }
+
+/* ===== CENTRAR FOTOS DE PRODUCTOS ===== */
+
+.product-visual{
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    overflow:hidden;
+}
+
+.product-visual img{
+    width:100%;
+    height:100%;
+    object-fit:contain;
+    object-position:center center;
+    padding:12px;
+    transform:none !important;
+}
+
+/* Ajuste fino para Articular */
+.product-visual img[src*="articular-perros"]{
+    position:relative;
+    top:-32px;
+}
+
+/* Ajuste fino para Cardio */
+.product-visual img[src*="cardio"]{
+    position:relative;
+    top:-28px;
+}
