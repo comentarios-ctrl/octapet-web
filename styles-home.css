@@ -800,15 +800,7 @@ img{
 }
 
 .about-visual::before{
-  content:"";
-  position:absolute;
-  width:320px;
-  height:320px;
-  border-radius:50%;
-  background:#fff;
-  opacity:.7;
-  right:-70px;
-  top:-60px;
+  display:none;
 }
 
 .lab-card,
