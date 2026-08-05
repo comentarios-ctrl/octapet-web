@@ -495,6 +495,7 @@ img{
   object-fit:contain;
   object-position:center center;
   padding:13px;
+  transform:translateY(-45px);
 }
 
 .product-fallback{
@@ -1199,15 +1200,6 @@ img{
   /* Las imágenes de producto permanecen completas y centradas */
   .product-visual{
     height:250px;
-  }
-
-  .product-visual img{
-    width:100%;
-    height:100%;
-    object-fit:contain;
-    object-position:center center;
-    padding:13px;
-    transform:none;
   }
 
   .story-icons{
