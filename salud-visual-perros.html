@@ -967,32 +967,76 @@
 
       h1{font-size:clamp(3rem,18vw,4.8rem)}
 
-      .hero-grid{
-        min-height:790px;
-        padding:44px 0 0;
-      }
+      .hero{
+  min-height:690px;
+  background:#dceff8;
+}
 
-      .hero-copy{max-width:100%}
+.hero-grid{
+  min-height:690px;
+  padding:235px 0 28px;
+  align-items:flex-end;
+}
 
-      .hero-icons{
-        grid-template-columns:1fr 1fr;
-      }
+.hero-copy{
+  width:100%;
+  max-width:100%;
+}
 
-      .hero-icon:last-child{
-        grid-column:1/-1;
-      }
+.hero-copy h1{
+  margin-bottom:14px;
+  font-size:clamp(2.8rem,13vw,4rem);
+  line-height:.9;
+}
 
-      .hero-visual{
-        background:
-          linear-gradient(
-            180deg,
-            rgba(232,246,252,.99) 0%,
-            rgba(232,246,252,.96) 38%,
-            rgba(232,246,252,.60) 55%,
-            rgba(232,246,252,.02) 74%
-          ),
-          url("img/hero-salud-visual.jpeg") 67% center/cover no-repeat;
-      }
+.hero-copy p{
+  margin-bottom:0;
+  font-size:.94rem;
+  line-height:1.45;
+}
+
+.hero-icons{
+  grid-template-columns:repeat(3,1fr);
+  gap:8px;
+  margin:18px 0;
+}
+
+.hero-icon{
+  min-width:0;
+  padding:11px 5px;
+  border-radius:16px;
+  font-size:.58rem;
+}
+
+.hero-icon i{
+  margin-bottom:6px;
+  font-size:1.15rem;
+}
+
+.hero-icon:last-child{
+  grid-column:auto;
+}
+
+.hero .btn{
+  width:100%;
+}
+
+.hero-visual{
+  background-image:
+    linear-gradient(
+      180deg,
+      rgba(220,239,248,.02) 0%,
+      rgba(220,239,248,.06) 38%,
+      rgba(220,239,248,.70) 61%,
+      rgba(220,239,248,.96) 78%,
+      #dceff8 100%
+    ),
+    url("img/hero-salud-visual.jpeg");
+
+  background-repeat:no-repeat;
+  background-size:auto 450px;
+  background-position:center top;
+}
 
       .quick-grid{
         grid-template-columns:1fr 1fr;
