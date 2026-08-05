@@ -475,6 +475,7 @@ img{
 }
 
 .product-visual{
+  position:relative;
   height:230px;
   border-radius:18px;
   background:
@@ -483,22 +484,22 @@ img{
       color-mix(in srgb,var(--accent,#dceaf6) 25%,#fff),
       #fff
     );
-  display:grid;
-  place-items:center;
   margin-bottom:17px;
   overflow:hidden;
 }
 
 .product-visual img{
+  position:absolute;
+  top:50%;
+  left:50%;
   width:auto;
   height:auto;
-  max-width:100%;
-  max-height:100%;
+  max-width:calc(100% - 26px);
+  max-height:calc(100% - 26px);
+  padding:0;
   object-fit:contain;
-  object-position:center center;
-  padding:13px;
+  transform:translate(-50%,-50%);
 }
-
 .product-fallback{
   display:none;
   width:100%;
