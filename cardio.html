@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <meta name="theme-color" content="#9f3f59" />
+  <title>Cardio+ para Perros | Octapet</title>
+  <meta name="description" content="Octapet Cardio+: apoyo nutricional cardiovascular para perros. Conoce sus ingredientes, la historia de Ratilla y calcula la dosis y duración de una bolsa." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+  <style>
+    :root{
+      --wine:#92364f;
+      --wine-dark:#5e1f34;
+      --rose:#d9859b;
+      --rose-soft:#f8e8ed;
+      --rose-pale:#fff7f9;
+      --ink:#201a1d;
+      --muted:#746870;
+      --line:#ead9df;
+      --white:#fff;
+      --shadow:0 18px 48px rgba(92,31,52,.12);
+      --radius:26px;
+      --max:1180px;
+    }
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{margin:0;font-family:"Montserrat",sans-serif;color:var(--ink);background:#fff;line-height:1.55}
+    img{display:block;max-width:100%}
+    a{color:inherit;text-decoration:none}
+    button,input{font:inherit}
+    .container{width:min(calc(100% - 28px),var(--max));margin-inline:auto}
+    .section{padding:74px 0}
+    .section-soft{background:var(--rose-pale)}
+    .eyebrow{display:inline-flex;align-items:center;gap:8px;margin-bottom:10px;color:var(--wine);font-size:.72rem;font-weight:900;letter-spacing:.09em;text-transform:uppercase}
+    h1,h2,h3,p{margin-top:0}
+    h1{font-size:clamp(2.55rem,9vw,5.25rem);line-height:.99;letter-spacing:-.055em;margin-bottom:20px}
+    h2{font-size:clamp(1.9rem,7vw,3.15rem);line-height:1.08;letter-spacing:-.04em;margin-bottom:16px}
+    h3{font-size:1.06rem;line-height:1.28;margin-bottom:8px}
+    .lead{font-size:1rem;color:var(--muted)}
+    .section-heading{max-width:760px;margin-bottom:30px}
+    .section-heading.center{text-align:center;margin-inline:auto}
+    .btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;min-height:52px;padding:14px 22px;border-radius:999px;border:0;background:var(--wine);color:#fff;font-weight:900;cursor:pointer;box-shadow:0 12px 26px rgba(146,54,79,.24)}
+    .btn-light{background:#fff;color:var(--wine-dark);box-shadow:none}
+
+    /* HERO */
+    .hero-banner{position:relative;isolation:isolate;min-height:690px;overflow:hidden;color:#fff;background:#2d151e}
+    .hero-banner-image{position:absolute;inset:0;z-index:-3;background:url("img/hero-cardio-ratilla.jpeg") center/cover no-repeat;transform:scale(1.01)}
+    .hero-banner-overlay{position:absolute;inset:0;z-index:-2;background:linear-gradient(90deg,rgba(20,16,14,.76) 0%,rgba(20,16,14,.54) 30%,rgba(20,16,14,.14) 56%,rgba(20,16,14,0) 72%),linear-gradient(180deg,rgba(0,0,0,.03),rgba(0,0,0,.10))}
+    .topbar{display:flex;align-items:center;justify-content:space-between;gap:24px;padding:18px 0}
+    .brand{display:inline-flex;align-items:center;gap:10px;color:#fff;font-weight:900;letter-spacing:.04em}
+    .brand-mark{display:grid;width:42px;height:42px;place-items:center;border-radius:50%;color:var(--wine-dark);background:#fff}
+    .nav{display:none;align-items:center;gap:28px;color:#fff;font-size:.84rem;font-weight:700}
+    .hero-content{display:flex;align-items:center;min-height:590px;padding:54px 0 64px}
+    .hero-copy{width:min(100%,610px)}
+    .hero-eyebrow{padding:7px 12px;border-radius:999px;color:#fff;background:var(--wine)}
+    .hero-copy h1{color:#fff;max-width:600px}
+    .hero-copy>p{max-width:555px;color:#f3e8ec;font-size:clamp(.93rem,1.25vw,1.08rem)}
+    .hero-benefits{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:12px;width:min(100%,565px);margin-top:28px}
+    .hero-benefit{text-align:center;color:#fff4f7;font-size:.69rem;font-weight:800}
+    .hero-benefit span{display:grid;width:50px;height:50px;place-items:center;margin:0 auto 8px;border:1px solid rgba(255,196,214,.75);border-radius:50%;background:rgba(45,12,24,.38);font-size:1.05rem;backdrop-filter:blur(8px)}
+    .hero-actions{display:flex;flex-wrap:wrap;gap:12px;margin-top:28px}
+
+    /* STATS */
+    .facts-panel{padding:24px;border:1px solid var(--line);border-radius:32px;background:linear-gradient(145deg,#fff8fa,#fdeef3);box-shadow:var(--shadow)}
+    .facts-layout{display:grid;gap:26px}
+    .facts-intro{display:flex;flex-direction:column;align-items:flex-start;justify-content:center;padding:8px 4px}
+    .facts-intro h2{max-width:520px;margin:14px 0 16px;font-size:clamp(2.55rem,7vw,5rem);line-height:.96;letter-spacing:-.055em}
+    .facts-intro p{max-width:420px;margin:0;color:var(--muted);font-size:.96rem}
+    .heart-line{width:210px;max-width:70%;margin-top:24px;color:var(--wine)}
+    .fact-cards{display:grid;gap:18px}
+    .fact-card{position:relative;overflow:visible;padding:14px 14px 20px;border:1px solid var(--line);border-radius:26px;background:rgba(255,255,255,.95);box-shadow:0 14px 35px rgba(96,34,56,.08);text-align:center}
+    .fact-photo{display:block;width:100%;height:205px;object-fit:cover;border-radius:19px}
+    .fact-top-icon{position:absolute;top:-27px;left:50%;display:grid;width:58px;height:58px;place-items:center;transform:translateX(-50%);border:5px solid #fff;border-radius:50%;background:var(--wine);color:#fff;font-size:1.15rem;box-shadow:0 10px 22px rgba(111,31,58,.22)}
+    .fact-badge{display:grid;width:84px;height:84px;place-items:center;margin:-42px auto 14px;border:8px solid #fff;border-radius:50%;background:#fff;color:var(--wine);font-size:1.35rem;font-weight:900;box-shadow:0 10px 28px rgba(95,30,53,.14)}
+    .fact-card:first-child .fact-badge{display:none}
+    .fact-card:first-child h3{margin-top:16px}
+    .fact-card h3{margin:0 auto 10px;max-width:250px;font-size:1.12rem;line-height:1.14}
+    .fact-card p{min-height:76px;margin:0 auto 14px;max-width:270px;color:var(--muted);font-size:.81rem}
+    .fact-divider{width:38px;height:2px;margin:15px auto;background:var(--wine);opacity:.65}
+    .source-link{display:inline-flex;align-items:center;gap:7px;color:var(--wine);font-size:.73rem;font-weight:900;text-decoration:underline;text-underline-offset:3px}
+    .facts-note{display:flex;align-items:center;justify-content:center;gap:12px;margin-top:20px;padding:14px 18px;border-radius:999px;background:rgba(255,255,255,.68);color:var(--text);font-size:.8rem;text-align:center}
+    .facts-note i{display:grid;flex:0 0 38px;width:38px;height:38px;place-items:center;border-radius:50%;background:#f6d8e1;color:var(--wine)}
+
+    /* MECHANISM */
+    .mechanism-panel{overflow:hidden;border:1px solid var(--line);border-radius:28px;background:#fbe9ee;box-shadow:var(--shadow)}
+    .mechanism-panel img{width:100%;height:auto}
+
+    /* INGREDIENTS */
+    .ingredient-grid{display:grid;gap:16px}
+    .ingredient-card{padding:22px;border:1px solid var(--line);border-radius:22px;background:#fff;box-shadow:0 10px 28px rgba(92,31,52,.06)}
+    .ingredient-icon{display:grid;width:54px;height:54px;place-items:center;margin-bottom:15px;border-radius:50%;background:var(--rose-soft);color:var(--wine);font-size:1.2rem}
+    .ingredient-card p{margin:0;color:var(--muted);font-size:.84rem}
+
+    /* CALCULATOR */
+    .calculator-layout{display:grid;gap:22px;padding:24px;border:1px solid var(--line);border-radius:30px;background:linear-gradient(145deg,#fcecf1,#fff);box-shadow:var(--shadow)}
+    .weight-box{padding:24px;border-radius:24px;background:#fff}
+    .weight-input-wrap{display:flex;align-items:center;gap:10px;margin:20px 0}
+    .weight-input{width:100%;min-height:56px;padding:12px 16px;border:1px solid var(--line);border-radius:15px;font-weight:900;font-size:1.1rem;outline:none}
+    .weight-input:focus{border-color:var(--rose);box-shadow:0 0 0 4px rgba(217,133,155,.16)}
+    .unit-pill{padding:15px 17px;border-radius:15px;background:var(--rose-soft);color:var(--wine-dark);font-weight:900}
+    .result-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:12px}
+    .result-card{padding:18px;border-radius:19px;background:#fff;text-align:center;border:1px solid var(--line)}
+    .result-card span{display:block;color:var(--muted);font-size:.72rem}
+    .result-card strong{display:block;margin-top:5px;color:var(--wine);font-size:1.8rem;line-height:1.1}
+    .duration-card{grid-column:1/-1;background:var(--wine);color:#fff;border-color:transparent}
+    .duration-card span{color:#f8dfe6}
+    .duration-card strong{color:#fff;font-size:2.3rem}
+    .use-card{padding:24px;border-radius:24px;background:var(--wine-dark);color:#fff}
+    .use-list{display:grid;gap:15px;margin-top:22px}
+    .use-item{display:flex;align-items:center;gap:12px;font-size:.87rem}
+    .use-item i{display:grid;width:38px;height:38px;place-items:center;border-radius:50%;background:rgba(255,255,255,.12);color:#ffd5e0}
+    .range-note{margin:18px 0 0;color:var(--muted);font-size:.76rem}
+
+    /* STORY */
+    .story-grid{display:grid;gap:22px;align-items:center}
+    .story-media{overflow:hidden;border-radius:26px;box-shadow:var(--shadow);background:#eee}
+    .story-media img{
+  width:100%;
+  height:auto;
+  object-fit:contain;
+  object-position:center;
+}
+    .story-copy{padding:28px;border-radius:26px;background:linear-gradient(145deg,#fdebf0,#fff);border:1px solid var(--line)}
+    .story-copy .quote{font-weight:700;color:var(--wine-dark)}
+
+    /* QUALITY + CTA */
+    .quality-grid{display:grid;gap:14px}
+    .quality-card{display:flex;gap:14px;align-items:flex-start;padding:18px;border:1px solid var(--line);border-radius:20px;background:#fff}
+    .quality-card i{display:grid;flex:0 0 42px;width:42px;height:42px;place-items:center;border-radius:50%;background:var(--rose-soft);color:var(--wine)}
+    .quality-card p{margin:0;color:var(--muted);font-size:.82rem}
+    .cta{padding:34px 0;color:#fff;background:linear-gradient(135deg,var(--wine-dark),var(--wine))}
+    .cta-inner{display:grid;gap:20px;align-items:center}
+    .cta h2{margin-bottom:8px}.cta p{margin:0;color:#f4dce4}
+    footer{padding:22px 0;background:#451525;color:#f0d9e1;text-align:center;font-size:.8rem}
+    .disclaimer{padding:18px;border-radius:18px;background:#fff7f9;border:1px solid var(--line);color:var(--muted);font-size:.78rem}
+    .reveal{opacity:0;transform:translateY(18px);transition:.55s ease}.reveal.visible{opacity:1;transform:none}
+
+    @media(min-width:760px){
+      .container{width:min(calc(100% - 48px),var(--max))}.section{padding:92px 0}.nav{display:flex}
+      .facts-layout{grid-template-columns:.82fr 2.18fr;align-items:stretch}
+      .fact-cards{grid-template-columns:repeat(3,1fr)}
+      .ingredient-grid{grid-template-columns:repeat(5,1fr)}
+      .calculator-layout{grid-template-columns:1.08fr .92fr;padding:28px}
+      .story-grid{grid-template-columns:1fr 1fr}
+      .quality-grid{grid-template-columns:repeat(3,1fr)}
+      .cta-inner{grid-template-columns:1fr auto}
+    }
+    @media(max-width:819px){
+      .hero-banner{min-height:790px}.hero-banner-image{background-position:58% center}.hero-banner-overlay{background:linear-gradient(180deg,rgba(15,12,10,.02) 0%,rgba(15,12,10,.10) 34%,rgba(18,14,13,.72) 65%,rgba(18,14,13,.94) 100%)}
+      .hero-content{align-items:flex-end;min-height:700px;padding:320px 0 46px}.hero-benefits{grid-template-columns:repeat(3,1fr);width:100%}
+    }
+    @media(max-width:759px){
+      .facts-intro{text-align:center;align-items:center}.facts-intro p{max-width:520px}.fact-card{max-width:520px;width:100%;margin-inline:auto}.fact-card p{min-height:0}.facts-note{border-radius:22px;align-items:flex-start}
+    }
+    @media(max-width:520px){
+      .hero-banner{min-height:830px}.hero-banner-image{background-size:auto 455px;background-position:56% 14%;background-color:#2c241f}
+      .hero-content{min-height:755px;padding-top:340px}.hero-actions,.hero-actions .btn{width:100%}.result-grid{grid-template-columns:1fr}.duration-card{grid-column:auto}
+      .mechanism-panel{overflow-x:auto;-webkit-overflow-scrolling:touch}.mechanism-panel img{width:900px;max-width:none}
+    }
+    @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.reveal{opacity:1;transform:none;transition:none}}
+  </style>
+</head>
+<body>
+<header class="hero-banner">
+  <div class="hero-banner-image" aria-hidden="true"></div><div class="hero-banner-overlay" aria-hidden="true"></div>
+  <div class="container">
+    <div class="topbar">
+      <a href="index.html" class="brand"><span class="brand-mark"><i class="fa-solid fa-paw"></i></span><span>OCTAPET</span></a>
+      <nav class="nav" aria-label="Navegación principal"><a href="index.html#productos">Productos</a><a href="index.html#manada">La manada</a><a href="index.html#nosotros">Nosotros</a><a href="index.html#contacto">Contacto</a></nav>
+      <a class="btn" href="#calculadora">Calcular dosis <i class="fa-solid fa-arrow-down"></i></a>
+    </div>
+    <div class="hero-content">
+      <div class="hero-copy reveal">
+        <span class="eyebrow hero-eyebrow"><i class="fa-solid fa-heart-pulse"></i> Apoyo cardiovascular para perros</span>
+        <h1>Más energía para seguir disfrutando cada paseo.</h1>
+        <p>Fórmula integral con nutrientes seleccionados para apoyar la salud cardiovascular, la energía celular y la protección del corazón de tu perro.</p>
+        <div class="hero-benefits">
+          <div class="hero-benefit"><span><i class="fa-solid fa-bolt"></i></span>Energía</div>
+          <div class="hero-benefit"><span><i class="fa-solid fa-heart-pulse"></i></span>Latido</div>
+          <div class="hero-benefit"><span><i class="fa-solid fa-shield-halved"></i></span>Protección</div>
+          <div class="hero-benefit"><span><i class="fa-solid fa-droplet"></i></span>Omega-3</div>
+          <div class="hero-benefit"><span><i class="fa-solid fa-flask"></i></span>Evidencia</div>
+        </div>
+        <div class="hero-actions"><a class="btn btn-light" href="#como-ayuda">Descubre cómo ayuda <i class="fa-solid fa-arrow-down"></i></a></div>
+      </div>
+    </div>
+  </div>
+</header>
+
+<main>
+  <section class="section" id="riesgo">
+    <div class="container">
+      <div class="facts-panel reveal">
+        <div class="facts-layout">
+          <div class="facts-intro">
+            <span class="eyebrow">Datos que vale la pena conocer</span>
+            <h2>El corazón también necesita prevención y seguimiento.</h2>
+            <p>Conocer estos datos ayuda a tomar decisiones a tiempo y a cuidar mejor la salud de nuestros perros.</p>
+            <svg class="heart-line" viewBox="0 0 240 70" aria-hidden="true">
+              <path d="M8 47 C55 59,75 60,101 46 C120 36,120 17,108 13 C95 9,87 20,86 30 C85 19,77 9,64 13 C48 19,52 38,67 47 C84 58,99 63,120 54 C147 43,164 31,176 21 C186 12,197 11,204 18 C212 26,209 39,198 45 C187 51,177 46,174 37 C172 30,179 24,186 27 C192 30,191 38,185 40" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"/>
+              <circle cx="208" cy="18" r="5" fill="currentColor"/>
+            </svg>
+          </div>
+          <div class="fact-cards">
+            <article class="fact-card">
+              <span class="fact-top-icon"><i class="fa-solid fa-heart-pulse"></i></span>
+              <img class="fact-photo" src="img/stats-small-dogs.jpg" alt="Perros pequeños">
+              <div class="fact-badge">≈75%</div>
+              <h3>De las cardiopatías caninas</h3>
+              <p>corresponden a enfermedad valvular degenerativa, principalmente de la válvula mitral.</p>
+              <div class="fact-divider"></div>
+              <a class="source-link" href="https://pmc.ncbi.nlm.nih.gov/articles/PMC6524084/" target="_blank" rel="noopener">Fuente: consenso ACVIM <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+            </article>
+            <article class="fact-card">
+              <span class="fact-top-icon"><i class="fa-solid fa-dog"></i></span>
+              <img class="fact-photo" src="img/stats-senior-small-dog.jpg" alt="Perro pequeño de edad avanzada">
+              <div class="fact-badge"><i class="fa-solid fa-chart-line"></i></div>
+              <h3>Mayor riesgo en talla pequeña</h3>
+              <p>Las razas pequeñas son las más predispuestas y el riesgo aumenta conforme avanza la edad.</p>
+              <div class="fact-divider"></div>
+              <a class="source-link" href="https://pmc.ncbi.nlm.nih.gov/articles/PMC6524084/" target="_blank" rel="noopener">Fuente: consenso ACVIM <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+            </article>
+            <article class="fact-card">
+              <span class="fact-top-icon"><i class="fa-solid fa-stethoscope"></i></span>
+              <img class="fact-photo" src="img/stats-murmur-check.jpg" alt="Revisión veterinaria del corazón de un perro">
+              <div class="fact-badge"><i class="fa-solid fa-wave-square"></i></div>
+              <h3>Puede empezar con un soplo</h3>
+              <p>En muchos perros el primer hallazgo ocurre durante una revisión veterinaria, antes de signos visibles.</p>
+              <div class="fact-divider"></div>
+              <a class="source-link" href="https://academic.oup.com/jvim/article/33/3/1127/8448111" target="_blank" rel="noopener">Fuente: guía veterinaria <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+            </article>
+          </div>
+        </div>
+        <div class="facts-note"><i class="fa-solid fa-shield-heart"></i><span>La prevención y el seguimiento veterinario periódico son clave para detectar cambios a tiempo y mantener la mejor calidad de vida posible.</span></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section-soft" id="como-ayuda">
+    <div class="container">
+      <div class="section-heading center reveal"><span class="eyebrow">¿Cómo ayuda nuestra fórmula?</span><h2>Cada ingrediente apoya una función diferente del corazón.</h2><p class="lead">No todos hacen lo mismo. Juntos forman una estrategia nutricional integral.</p></div>
+      <div class="mechanism-panel reveal"><img src="img/como-ayuda-formula.png" alt="Infografía sobre cómo ayudan los ingredientes de Cardio+ al corazón"></div>
+    </div>
+  </section>
+
+  <section class="section section-soft" id="calculadora">
+    <div class="container">
+      <div class="section-heading center reveal"><span class="eyebrow">¿Cuánto darle y cuánto dura?</span><h2>Calcula la dosis diaria de tu perro.</h2><p class="lead">Ingresa su peso y te mostramos la cantidad diaria y la duración aproximada de una bolsa de 150 g.</p></div>
+      <div class="calculator-layout reveal">
+        <div class="weight-box">
+          <h3>¿Cuánto pesa tu perro?</h3>
+          <div class="weight-input-wrap"><input id="dogWeight" class="weight-input" type="number" min="0.5" max="80" step="0.1" value="6.5" inputmode="decimal" aria-label="Peso del perro en kilogramos"><span class="unit-pill">kg</span></div>
+          <div class="result-grid">
+            <div class="result-card"><span>Dosis diaria</span><strong id="dailyDose">3 g</strong></div>
+            <div class="result-card"><span>Medición</span><strong id="scoopGuide">Línea 3</strong></div>
+            <div class="result-card duration-card"><span>Una bolsa de 150 g dura aproximadamente</span><strong id="durationDays">50 días</strong></div>
+          </div>
+          <p class="range-note" id="rangeNote">Rango actual: más de 5 kg y hasta 8 kg.</p>
+        </div>
+        <div class="use-card">
+          <span class="eyebrow" style="color:#ffd5e0">Modo de uso</span><h2 style="font-size:2rem">Simple todos los días.</h2>
+          <div class="use-list">
+            <div class="use-item"><i class="fa-solid fa-spoon"></i><span>Scoop de 5 g con líneas de 1 g incluido.</span></div>
+            <div class="use-item"><i class="fa-solid fa-bowl-food"></i><span>Mezclar la porción diaria con su alimento.</span></div>
+            <div class="use-item"><i class="fa-solid fa-calendar-day"></i><span>Administrar una vez al día o dividir en dos tomas.</span></div>
+            <div class="use-item"><i class="fa-solid fa-user-doctor"></i><span>Usar como complemento del seguimiento veterinario.</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="historia">
+    <div class="container"><div class="story-grid">
+      <div class="story-media reveal"><img src="img/ratilla-historia.jpeg" alt="Ratilla, inspiración de Octapet Cardio+"></div>
+      <div class="story-copy reveal"><span class="eyebrow">La historia de Ratilla</span><h2>El corazón detrás de esta fórmula.</h2><p>Ratilla tiene 12 años y vive con una enfermedad cardíaca. Aun así, sigue siendo un perro lleno de energía, felicidad y ganas de salir a correr.</p><p>Ya no puede correr como antes, pero se emociona mucho cuando vamos a salir. Yo lo adoro con todo mi corazón y quiero seguir viéndolo feliz durante todo el tiempo que podamos compartir.</p><p class="quote">Cardio+ fué creado porque quería desarrollar el suplemento que yo misma elegiría para apoyar al perro que amo.</p><p>No promete milagros ni sustituye su tratamiento. Busca sumar apoyo nutricional a los medicamentos, las revisiones y todos los cuidados que ya forman parte de su vida.</p></div>
+    </div></div>
+  </section>
+
+  <section class="section section-soft">
+    <div class="container">
+      <div class="section-heading center reveal"><span class="eyebrow">Calidad Octapet</span><h2>Hecho con el mismo cuidado que daríamos a nuestros propios perros.</h2></div>
+      <div class="quality-grid">
+        <article class="quality-card reveal"><i class="fa-solid fa-flask"></i><div><h3>Desarrollado con criterio técnico</h3><p>Selección de ingredientes y dosis basada en revisión de literatura y especificaciones de materia prima.</p></div></article>
+        <article class="quality-card reveal"><i class="fa-solid fa-box-open"></i><div><h3>Fabricación en pequeños lotes</h3><p>Permite mayor atención a la mezcla, uniformidad y trazabilidad.</p></div></article>
+        <article class="quality-card reveal"><i class="fa-solid fa-file-circle-check"></i><div><h3>Materias primas verificadas</h3><p>Se revisan certificados de análisis y especificaciones de los ingredientes principales.</p></div></article>
+      </div>
+      <div class="disclaimer" style="margin-top:22px"><strong>Importante:</strong> Cardio+ es un suplemento alimenticio y no sustituye medicamentos, diagnósticos, ecocardiogramas ni seguimiento con el médico veterinario. En perros con cardiopatía conocida, consulta su uso con el veterinario tratante.</div>
+    </div>
+  </section>
+
+  <section class="cta"><div class="container"><div class="cta-inner"><div><h2>Porque cada paseo juntos sigue contando.</h2><p>Apoyo nutricional cardiovascular inspirado en Ratilla.</p></div><a class="btn btn-light" href="https://www.instagram.com/octapet.mx/" target="_blank" rel="noopener">Conocer disponibilidad <i class="fa-solid fa-cart-shopping"></i></a></div></div></section>
+</main>
+<footer><div class="container">© 2026 Octapet. Todos los derechos reservados.</div></footer>
+
+<script>
+  const weightInput=document.getElementById('dogWeight');
+  const dailyDose=document.getElementById('dailyDose');
+  const scoopGuide=document.getElementById('scoopGuide');
+  const durationDays=document.getElementById('durationDays');
+  const rangeNote=document.getElementById('rangeNote');
+  function doseForWeight(w){
+    if(w<=2)return {dose:1,range:'Hasta 2 kg'};
+    if(w<=5)return {dose:2,range:'Más de 2 kg y hasta 5 kg'};
+    if(w<=8)return {dose:3,range:'Más de 5 kg y hasta 8 kg'};
+    if(w<=12)return {dose:4,range:'Más de 8 kg y hasta 12 kg'};
+    if(w<=16)return {dose:5,range:'Más de 12 kg y hasta 16 kg'};
+    if(w<=20)return {dose:6,range:'Más de 16 kg y hasta 20 kg'};
+    if(w<=25)return {dose:7,range:'Más de 20 kg y hasta 25 kg'};
+    if(w<=30)return {dose:8,range:'Más de 25 kg y hasta 30 kg'};
+    return {dose:9,range:'Más de 30 kg'};
+  }
+  function updateCalculator(){
+    let w=parseFloat(weightInput.value);
+    if(!Number.isFinite(w)||w<=0)w=.5;
+    const result=doseForWeight(w);
+    const days=Math.floor(150/result.dose);
+    dailyDose.textContent=`${result.dose} g`;
+    scoopGuide.textContent=result.dose<=5?`Línea ${result.dose}`:`${(result.dose/5).toFixed(result.dose%5?1:0)} scoops`;
+    durationDays.textContent=`${days} días`;
+    rangeNote.textContent=`Rango actual: ${result.range}.`;
+  }
+  weightInput.addEventListener('input',updateCalculator);updateCalculator();
+  const revealItems=document.querySelectorAll('.reveal');
+  if('IntersectionObserver' in window){const observer=new IntersectionObserver(entries=>{entries.forEach(entry=>{if(entry.isIntersecting){entry.target.classList.add('visible');observer.unobserve(entry.target)}})},{threshold:.1});revealItems.forEach(item=>observer.observe(item));}else{revealItems.forEach(item=>item.classList.add('visible'));}
+</script>
+</body>
+</html>
