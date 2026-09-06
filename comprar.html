@@ -1,0 +1,476 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <meta name="theme-color" content="#eef7ff" />
+
+  <title>Tienda Octapet | Bienestar real</title>
+
+  <meta
+    name="description"
+    content="Compra suplementos e higiene Octapet para perros y gatos."
+  />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&display=swap"
+    rel="stylesheet"
+  >
+
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+  >
+
+  <link rel="stylesheet" href="styles-home.css" />
+  <link rel="stylesheet" href="styles-shop.css" />
+</head>
+
+<body>
+
+  <header class="site-header">
+    <div class="nav-wrap">
+
+      <a href="index.html" class="brand" aria-label="Octapet, inicio">
+        <span class="brand-paw">
+          <i class="fa-solid fa-paw"></i>
+        </span>
+
+        <span class="brand-copy">
+          <strong>OCTAPET</strong>
+          <small>BIENESTAR REAL</small>
+        </span>
+      </a>
+
+      <button
+        class="menu-toggle"
+        type="button"
+        aria-label="Abrir menú"
+        aria-expanded="false"
+      >
+        <i class="fa-solid fa-bars"></i>
+      </button>
+
+      <nav class="main-nav" aria-label="Navegación principal">
+        <a href="index.html#productos">Productos</a>
+        <a href="comprar.html" class="nav-shop active">
+          <i class="fa-solid fa-bag-shopping"></i>
+          Comprar
+        </a>
+        <a href="index.html#manada">Nuestra manada</a>
+        <a href="index.html#nosotros">Nosotros</a>
+        <a href="index.html#contacto">Contacto</a>
+      </nav>
+
+    </div>
+  </header>
+
+  <main>
+
+    <section class="shop-hero">
+      <div class="container">
+
+        <p class="eyebrow">Tienda Octapet</p>
+
+        <h1>
+          Bienestar real,
+          <span>directo a tu puerta.</span>
+        </h1>
+
+        <p>
+          Elige tus productos, agrégalos al carrito y realiza tu compra
+          de forma segura.
+        </p>
+
+      </div>
+    </section>
+
+    <section class="shop-section">
+      <div class="container">
+
+        <div class="shop-toolbar">
+
+          <div class="shop-filters">
+            <button class="filter-btn active" data-filter="all">Todos</button>
+            <button class="filter-btn" data-filter="suplementos">Suplementos</button>
+            <button class="filter-btn" data-filter="higiene">Higiene</button>
+            <button class="filter-btn" data-filter="perros">Perros</button>
+            <button class="filter-btn" data-filter="gatos">Gatos</button>
+          </div>
+
+          <button class="cart-button" id="openCart" type="button">
+            <i class="fa-solid fa-bag-shopping"></i>
+            Carrito
+            <span id="cartCount">0</span>
+          </button>
+
+        </div>
+
+        <div class="shop-grid" id="shopGrid">
+
+          <article class="shop-card" data-category="suplementos perros" data-id="articular" data-name="Soporte Articular" data-price="499" data-image="img/articular-perros.jpg">
+            <div class="shop-card-image">
+              <img src="img/articular-perros.jpg" alt="Soporte Articular para perros" loading="lazy">
+            </div>
+            <div class="shop-card-content">
+              <span class="shop-pill">Perros</span>
+              <h2>Soporte Articular</h2>
+              <p>Apoyo nutricional para movilidad, confort y bienestar articular.</p>
+              <div class="shop-price">$499 MXN</div>
+              <button class="add-to-cart" type="button">
+                <i class="fa-solid fa-plus"></i>
+                Agregar al carrito
+              </button>
+            </div>
+          </article>
+
+          <article class="shop-card" data-category="suplementos perros" data-id="cardio" data-name="Octapet Cardio" data-price="449" data-image="img/cardio.jpg">
+            <div class="shop-card-image">
+              <img src="img/cardio.jpg" alt="Octapet Cardio para perros" loading="lazy">
+            </div>
+            <div class="shop-card-content">
+              <span class="shop-pill">Perros</span>
+              <h2>Octapet Cardio</h2>
+              <p>Soporte nutricional cardiovascular para perros adultos y senior.</p>
+              <div class="shop-price">$449 MXN</div>
+              <button class="add-to-cart" type="button">
+                <i class="fa-solid fa-plus"></i>
+                Agregar al carrito
+              </button>
+            </div>
+          </article>
+
+          <article class="shop-card" data-category="suplementos perros" data-id="sacia" data-name="Sacia" data-price="249" data-image="img/peso-ideal.jpg">
+            <div class="shop-card-image">
+              <img src="img/peso-ideal.jpg" alt="Sacia para perros" loading="lazy">
+            </div>
+            <div class="shop-card-content">
+              <span class="shop-pill">Perros</span>
+              <h2>Sacia</h2>
+              <p>Mezcla de fibras para apoyar la saciedad y el control de la ingesta.</p>
+              <div class="shop-price">$249 MXN</div>
+              <button class="add-to-cart" type="button">
+                <i class="fa-solid fa-plus"></i>
+                Agregar al carrito
+              </button>
+            </div>
+          </article>
+
+          <article class="shop-card" data-category="suplementos perros" data-id="salud-visual" data-name="Salud Visual" data-price="599" data-image="img/salud-visual.png">
+            <div class="shop-card-image">
+              <img src="img/salud-visual.png" alt="Salud Visual para perros" loading="lazy">
+            </div>
+            <div class="shop-card-content">
+              <span class="shop-pill">Perros</span>
+              <h2>Salud Visual</h2>
+              <p>Protección antioxidante y soporte nutricional para el cuidado diario de la visión.</p>
+              <div class="shop-price">$599 MXN</div>
+              <button class="add-to-cart" type="button">
+                <i class="fa-solid fa-plus"></i>
+                Agregar al carrito
+              </button>
+            </div>
+          </article>
+
+          <article class="shop-card" data-category="higiene perros" data-id="shampoo-hidratante" data-name="Shampoo Hidratante" data-price="249" data-image="img/shampoo-hidratante.png">
+            <div class="shop-card-image">
+              <img src="img/shampoo-hidratante.png" alt="Shampoo Hidratante para perros" loading="lazy">
+            </div>
+            <div class="shop-card-content">
+              <span class="shop-pill">Perros</span>
+              <h2>Shampoo Hidratante</h2>
+              <p>Limpieza suave e hidratación para piel seca y pelaje que necesita cuidado extra.</p>
+              <div class="shop-price">$249 MXN</div>
+              <button class="add-to-cart" type="button">
+                <i class="fa-solid fa-plus"></i>
+                Agregar al carrito
+              </button>
+            </div>
+          </article>
+
+          <article class="shop-card" data-category="higiene perros" data-id="shampoo-esencial" data-name="Shampoo Esencial" data-price="150" data-image="img/shampoo-esencial.png">
+            <div class="shop-card-image">
+              <img src="img/shampoo-esencial.png" alt="Shampoo Esencial para perros" loading="lazy">
+            </div>
+            <div class="shop-card-content">
+              <span class="shop-pill">Perros</span>
+              <h2>Shampoo Esencial</h2>
+              <p>Limpieza práctica para mantener el pelaje limpio y fresco.</p>
+              <div class="shop-price">$150 MXN</div>
+              <button class="add-to-cart" type="button">
+                <i class="fa-solid fa-plus"></i>
+                Agregar al carrito
+              </button>
+            </div>
+          </article>
+
+          <article class="shop-card" data-category="higiene perros" data-id="acondicionador" data-name="Acondicionador Desenredante" data-price="249" data-image="img/acondicionador-hidratante.png">
+            <div class="shop-card-image">
+              <img src="img/acondicionador-hidratante.png" alt="Acondicionador Desenredante para perros" loading="lazy">
+            </div>
+            <div class="shop-card-content">
+              <span class="shop-pill">Perros</span>
+              <h2>Acondicionador Desenredante</h2>
+              <p>Facilita el desenredo y deja el pelaje suave, acondicionado y manejable.</p>
+              <div class="shop-price">$249 MXN</div>
+              <button class="add-to-cart" type="button">
+                <i class="fa-solid fa-plus"></i>
+                Agregar al carrito
+              </button>
+            </div>
+          </article>
+
+          <article class="shop-card" data-category="higiene gatos" data-id="shampoo-gatos" data-name="Shampoo Hidratante para Gatos" data-price="249" data-image="img/gatos-hidratante.png">
+            <div class="shop-card-image">
+              <img src="img/gatos-hidratante.png" alt="Shampoo Hidratante para Gatos" loading="lazy">
+            </div>
+            <div class="shop-card-content">
+              <span class="shop-pill">Gatos</span>
+              <h2>Shampoo Hidratante para Gatos</h2>
+              <p>Limpieza suave e hidratante, sin fragancia añadida.</p>
+              <div class="shop-price">$249 MXN</div>
+              <button class="add-to-cart" type="button">
+                <i class="fa-solid fa-plus"></i>
+                Agregar al carrito
+              </button>
+            </div>
+          </article>
+
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <div class="cart-overlay" id="cartOverlay"></div>
+
+  <aside class="cart-drawer" id="cartDrawer" aria-label="Carrito de compra">
+
+    <div class="cart-header">
+      <div>
+        <p>Tu pedido</p>
+        <h2>Carrito</h2>
+      </div>
+
+      <button id="closeCart" class="close-cart" type="button" aria-label="Cerrar carrito">
+        <i class="fa-solid fa-xmark"></i>
+      </button>
+    </div>
+
+    <div class="cart-items" id="cartItems"></div>
+
+    <div class="cart-summary">
+      <div class="cart-total-row">
+        <span>Subtotal</span>
+        <strong id="cartTotal">$0 MXN</strong>
+      </div>
+
+      <p class="shipping-note">
+        El costo de envío se calculará al finalizar la compra.
+      </p>
+
+      <button class="checkout-button" id="checkoutButton" type="button" disabled>
+        Finalizar compra
+        <i class="fa-solid fa-arrow-right"></i>
+      </button>
+
+      <div class="secure-payment">
+        <i class="fa-solid fa-lock"></i>
+        Pago seguro procesado por Stripe
+      </div>
+    </div>
+
+  </aside>
+
+  <footer class="site-footer">
+    <div class="container footer-bottom">
+      <span>© 2026 Octapet. Todos los derechos reservados.</span>
+      <span>Hecho en México 🇲🇽</span>
+    </div>
+  </footer>
+
+  <script>
+    const toggle = document.querySelector('.menu-toggle');
+    const nav = document.querySelector('.main-nav');
+
+    toggle?.addEventListener('click', () => {
+      const open = nav.classList.toggle('open');
+      toggle.setAttribute('aria-expanded', String(open));
+      toggle.innerHTML = open
+        ? '<i class="fa-solid fa-xmark"></i>'
+        : '<i class="fa-solid fa-bars"></i>';
+    });
+
+    const filterButtons = document.querySelectorAll('.filter-btn');
+    const productCards = document.querySelectorAll('.shop-card');
+
+    filterButtons.forEach((button) => {
+      button.addEventListener('click', () => {
+        filterButtons.forEach(btn => btn.classList.remove('active'));
+        button.classList.add('active');
+
+        const filter = button.dataset.filter;
+
+        productCards.forEach(card => {
+          card.style.display =
+            filter === 'all' || card.dataset.category.includes(filter)
+              ? ''
+              : 'none';
+        });
+      });
+    });
+
+    let cart = JSON.parse(localStorage.getItem('octapetCart')) || [];
+
+    const cartDrawer = document.getElementById('cartDrawer');
+    const cartOverlay = document.getElementById('cartOverlay');
+    const openCartButton = document.getElementById('openCart');
+    const closeCartButton = document.getElementById('closeCart');
+    const cartItemsContainer = document.getElementById('cartItems');
+    const cartCount = document.getElementById('cartCount');
+    const cartTotal = document.getElementById('cartTotal');
+    const checkoutButton = document.getElementById('checkoutButton');
+
+    function saveCart() {
+      localStorage.setItem('octapetCart', JSON.stringify(cart));
+    }
+
+    function openCart() {
+      cartDrawer.classList.add('open');
+      cartOverlay.classList.add('open');
+      document.body.classList.add('cart-open');
+    }
+
+    function closeCart() {
+      cartDrawer.classList.remove('open');
+      cartOverlay.classList.remove('open');
+      document.body.classList.remove('cart-open');
+    }
+
+    function addToCart(product) {
+      const existing = cart.find(item => item.id === product.id);
+
+      if (existing) {
+        existing.quantity += 1;
+      } else {
+        cart.push({ ...product, quantity: 1 });
+      }
+
+      saveCart();
+      renderCart();
+      openCart();
+    }
+
+    function changeQuantity(id, amount) {
+      const product = cart.find(item => item.id === id);
+      if (!product) return;
+
+      product.quantity += amount;
+
+      if (product.quantity <= 0) {
+        cart = cart.filter(item => item.id !== id);
+      }
+
+      saveCart();
+      renderCart();
+    }
+
+    function removeItem(id) {
+      cart = cart.filter(item => item.id !== id);
+      saveCart();
+      renderCart();
+    }
+
+    function renderCart() {
+      cartItemsContainer.innerHTML = '';
+
+      if (cart.length === 0) {
+        cartItemsContainer.innerHTML = `
+          <div class="empty-cart">
+            <i class="fa-solid fa-bag-shopping"></i>
+            <h3>Tu carrito está vacío</h3>
+            <p>Agrega los productos que quieras comprar.</p>
+          </div>
+        `;
+
+        cartCount.textContent = '0';
+        cartTotal.textContent = '$0 MXN';
+        checkoutButton.disabled = true;
+        return;
+      }
+
+      let totalItems = 0;
+      let totalPrice = 0;
+
+      cart.forEach(item => {
+        totalItems += item.quantity;
+        totalPrice += item.price * item.quantity;
+
+        const element = document.createElement('div');
+        element.className = 'cart-item';
+
+        element.innerHTML = `
+          <img src="${item.image}" alt="${item.name}">
+
+          <div class="cart-item-info">
+            <h3>${item.name}</h3>
+            <span>$${item.price.toLocaleString('es-MX')} MXN</span>
+
+            <div class="quantity-controls">
+              <button type="button" onclick="changeQuantity('${item.id}', -1)" aria-label="Disminuir cantidad">
+                <i class="fa-solid fa-minus"></i>
+              </button>
+
+              <strong>${item.quantity}</strong>
+
+              <button type="button" onclick="changeQuantity('${item.id}', 1)" aria-label="Aumentar cantidad">
+                <i class="fa-solid fa-plus"></i>
+              </button>
+            </div>
+          </div>
+
+          <button class="remove-item" type="button" onclick="removeItem('${item.id}')" aria-label="Eliminar ${item.name}">
+            <i class="fa-regular fa-trash-can"></i>
+          </button>
+        `;
+
+        cartItemsContainer.appendChild(element);
+      });
+
+      cartCount.textContent = totalItems;
+      cartTotal.textContent = `$${totalPrice.toLocaleString('es-MX')} MXN`;
+      checkoutButton.disabled = false;
+    }
+
+    document.querySelectorAll('.add-to-cart').forEach(button => {
+      button.addEventListener('click', () => {
+        const card = button.closest('.shop-card');
+
+        const product = {
+          id: card.dataset.id,
+          name: card.dataset.name,
+          price: Number(card.dataset.price),
+          image: card.dataset.image
+        };
+
+        addToCart(product);
+      });
+    });
+
+    openCartButton.addEventListener('click', openCart);
+    closeCartButton.addEventListener('click', closeCart);
+    cartOverlay.addEventListener('click', closeCart);
+
+    checkoutButton.addEventListener('click', () => {
+      alert('El carrito funciona correctamente. En el siguiente paso conectaremos Stripe Checkout.');
+    });
+
+    renderCart();
+  </script>
+
+</body>
+</html>
