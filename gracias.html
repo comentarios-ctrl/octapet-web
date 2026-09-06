@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <meta name="theme-color" content="#eef7ff" />
+
+  <title>Gracias por tu compra | Octapet</title>
+  <meta
+    name="description"
+    content="Gracias por tu compra en Octapet. Tu pedido fue recibido correctamente."
+  />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&display=swap"
+    rel="stylesheet"
+  >
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+  >
+  <link rel="stylesheet" href="styles-home.css" />
+
+  <style>
+    :root {
+      --bg: #eef7ff;
+      --card: #ffffff;
+      --ink: #172033;
+      --muted: #687386;
+      --accent: #ff6a2a;
+      --border: rgba(23, 32, 51, 0.10);
+      --shadow: 0 24px 70px rgba(31, 59, 90, 0.12);
+    }
+
+    body {
+      margin: 0;
+      font-family: 'Montserrat', sans-serif;
+      background:
+        radial-gradient(circle at top left, rgba(255, 106, 42, 0.08), transparent 28%),
+        linear-gradient(180deg, #f7fbff 0%, var(--bg) 100%);
+      color: var(--ink);
+    }
+
+    .thankyou-main {
+      min-height: calc(100vh - 150px);
+      display: grid;
+      place-items: center;
+      padding: 64px 20px;
+    }
+
+    .thankyou-card {
+      width: min(760px, 100%);
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 28px;
+      box-shadow: var(--shadow);
+      padding: 46px 34px;
+      text-align: center;
+    }
+
+    .thankyou-icon {
+      width: 86px;
+      height: 86px;
+      margin: 0 auto 22px;
+      border-radius: 50%;
+      display: grid;
+      place-items: center;
+      background: rgba(255, 106, 42, 0.10);
+      color: var(--accent);
+      font-size: 38px;
+    }
+
+    .thankyou-eyebrow {
+      margin: 0 0 10px;
+      text-transform: uppercase;
+      letter-spacing: .16em;
+      font-weight: 800;
+      font-size: 12px;
+      color: var(--accent);
+    }
+
+    .thankyou-card h1 {
+      margin: 0 0 16px;
+      font-size: clamp(34px, 6vw, 58px);
+      line-height: 1.02;
+      letter-spacing: -0.03em;
+    }
+
+    .thankyou-lead {
+      max-width: 610px;
+      margin: 0 auto;
+      color: var(--muted);
+      font-size: 17px;
+      line-height: 1.7;
+    }
+
+    .thankyou-note {
+      margin: 28px auto 0;
+      max-width: 620px;
+      padding: 18px 20px;
+      border-radius: 18px;
+      background: #f8fafc;
+      border: 1px solid var(--border);
+      color: #465164;
+      line-height: 1.6;
+      font-size: 14px;
+    }
+
+    .thankyou-note i {
+      color: var(--accent);
+      margin-right: 8px;
+    }
+
+    .thankyou-actions {
+      display: flex;
+      gap: 12px;
+      justify-content: center;
+      flex-wrap: wrap;
+      margin-top: 30px;
+    }
+
+    .thankyou-btn {
+      text-decoration: none;
+      border-radius: 14px;
+      padding: 15px 22px;
+      font-weight: 800;
+      transition: transform .2s ease, opacity .2s ease;
+    }
+
+    .thankyou-btn:hover {
+      transform: translateY(-1px);
+    }
+
+    .thankyou-btn.primary {
+      background: var(--ink);
+      color: #fff;
+    }
+
+    .thankyou-btn.secondary {
+      background: #fff;
+      color: var(--ink);
+      border: 1px solid var(--border);
+    }
+
+    .session-ref {
+      margin-top: 22px;
+      font-size: 12px;
+      color: #98a2b3;
+      word-break: break-all;
+    }
+
+    @media (max-width: 640px) {
+      .thankyou-card {
+        padding: 36px 22px;
+        border-radius: 22px;
+      }
+
+      .thankyou-main {
+        padding: 34px 14px;
+      }
+
+      .thankyou-btn {
+        width: 100%;
+        box-sizing: border-box;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <header class="site-header">
+    <div class="nav-wrap">
+      <a href="index.html" class="brand" aria-label="Octapet, inicio">
+        <span class="brand-paw">
+          <i class="fa-solid fa-paw"></i>
+        </span>
+
+        <span class="brand-copy">
+          <strong>OCTAPET</strong>
+          <small>BIENESTAR REAL</small>
+        </span>
+      </a>
+
+      <nav class="main-nav" aria-label="Navegación principal">
+        <a href="index.html#productos">Productos</a>
+        <a href="comprar.html" class="nav-shop">
+          <i class="fa-solid fa-bag-shopping"></i>
+          Comprar
+        </a>
+        <a href="index.html#manada">Nuestra manada</a>
+        <a href="index.html#nosotros">Nosotros</a>
+        <a href="index.html#contacto">Contacto</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="thankyou-main">
+    <section class="thankyou-card" aria-labelledby="thankyouTitle">
+      <div class="thankyou-icon">
+        <i class="fa-solid fa-check"></i>
+      </div>
+
+      <p class="thankyou-eyebrow">Pedido recibido</p>
+      <h1 id="thankyouTitle">¡Gracias por tu compra!</h1>
+
+      <p class="thankyou-lead">
+        Tu pago fue procesado y tu pedido quedó registrado correctamente.
+        En breve recibirás la información relacionada con tu compra.
+      </p>
+
+      <div class="thankyou-note">
+        <i class="fa-solid fa-box"></i>
+        Prepararemos tu pedido con mucho cuidado. Si necesitas comunicarte con nosotros,
+        puedes hacerlo desde la sección de contacto de Octapet.
+      </div>
+
+      <div class="thankyou-actions">
+        <a class="thankyou-btn primary" href="index.html">
+          Volver al inicio
+        </a>
+
+        <a class="thankyou-btn secondary" href="comprar.html">
+          Seguir comprando
+        </a>
+      </div>
+
+      <div class="session-ref" id="sessionRef" hidden></div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-bottom">
+      <span>© 2026 Octapet. Todos los derechos reservados.</span>
+      <span>Hecho en México 🇲🇽</span>
+    </div>
+  </footer>
+
+  <script>
+    const params = new URLSearchParams(window.location.search);
+    const sessionId = params.get('session_id');
+    const sessionRef = document.getElementById('sessionRef');
+
+    if (sessionId) {
+      sessionRef.textContent = `Referencia de compra: ${sessionId}`;
+      sessionRef.hidden = false;
+    }
+
+    localStorage.removeItem('octapetCart');
+  </script>
+</body>
+</html>
