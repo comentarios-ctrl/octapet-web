@@ -225,3 +225,50 @@
     overflow-wrap: anywhere;
   }
 }
+/* BOTÓN WHATSAPP */
+
+.whatsapp-order-button {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+
+  margin-top: 12px;
+  padding: 16px 18px;
+
+  border: none;
+  border-radius: 14px;
+
+  background: #25D366;
+  color: #ffffff;
+
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1rem;
+  font-weight: 800;
+
+  cursor: pointer;
+  transition: transform .2s, background .2s;
+}
+
+.whatsapp-order-button i {
+  font-size: 1.25rem;
+}
+
+.whatsapp-order-button:hover:not(:disabled) {
+  background: #1fb85a;
+  transform: translateY(-1px);
+}
+
+.whatsapp-order-button:disabled {
+  opacity: .45;
+  cursor: not-allowed;
+}
+
+.transfer-note {
+  margin: 12px 0 0;
+  text-align: center;
+  color: var(--shop-muted);
+  font-size: .78rem;
+  line-height: 1.5;
+}
