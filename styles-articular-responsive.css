@@ -367,7 +367,22 @@ h3 {
     transform: translateY(0);
   }
 }
+/* IMAGEN 5 FRENTES */
 
+.formula-image {
+  width: 100%;
+  overflow: hidden;
+  border: 1px solid var(--line);
+  border-radius: 30px;
+  background: #fff;
+  box-shadow: var(--shadow);
+}
+
+.formula-image img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
 /* INFOGRAFÍA FÓRMULA */
 
 .formula-flow-section {
