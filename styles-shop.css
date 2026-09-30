@@ -140,28 +140,6 @@
     border-radius: 22px;
   }
 
-  /* MISMO ESPACIO PARA TODAS LAS IMÁGENES */
-  .shop-card-image {
-    width: 100%;
-    height: 300px;
-    aspect-ratio: auto;
-    padding: 18px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    overflow: hidden;
-  }
-
-  .shop-card-image img {
-    display: block;
-    width: 100%;
-    height: 100%;
-    max-width: 100%;
-    object-fit: contain;
-    object-position: center;
-    border-radius: 14px;
-  }
-
   /* INFORMACIÓN DEL PRODUCTO */
   .shop-card-content {
     padding: 20px;
