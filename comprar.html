@@ -291,17 +291,25 @@ src="https://www.facebook.com/tr?id=1759693591926781&ev=PageView&noscript=1"
         El costo de envío se calculará al finalizar la compra.
       </p>
 
-      <button class="checkout-button" id="checkoutButton" type="button" disabled>
-        Finalizar compra
-        <i class="fa-solid fa-arrow-right"></i>
-      </button>
+     <button class="checkout-button" id="checkoutButton" type="button" disabled>
+  <i class="fa-solid fa-lock"></i>
+  Pagar en línea
+</button>
 
-      <div class="secure-payment">
-        <i class="fa-solid fa-lock"></i>
-        Pago seguro procesado por Stripe
-      </div>
-    </div>
+<button class="whatsapp-order-button" id="whatsappOrderButton" type="button" disabled>
+  <i class="fa-brands fa-whatsapp"></i>
+  Pedir por WhatsApp
+</button>
 
+<div class="secure-payment">
+  <i class="fa-solid fa-shield-halved"></i>
+  Pago en línea seguro con Stripe
+</div>
+
+<p class="transfer-note">
+  También puedes hacer tu pedido por WhatsApp y pagar mediante transferencia bancaria.
+</p>
+</div>
   </aside>
 
   <footer class="site-footer">
@@ -352,6 +360,7 @@ src="https://www.facebook.com/tr?id=1759693591926781&ev=PageView&noscript=1"
     const cartCount = document.getElementById('cartCount');
     const cartTotal = document.getElementById('cartTotal');
     const checkoutButton = document.getElementById('checkoutButton');
+    const whatsappOrderButton = document.getElementById('whatsappOrderButton');
 
     function saveCart() {
       localStorage.setItem('octapetCart', JSON.stringify(cart));
@@ -416,9 +425,10 @@ src="https://www.facebook.com/tr?id=1759693591926781&ev=PageView&noscript=1"
         `;
 
         cartCount.textContent = '0';
-        cartTotal.textContent = '$0 MXN';
-        checkoutButton.disabled = true;
-        return;
+cartTotal.textContent = '$0 MXN';
+checkoutButton.disabled = true;
+whatsappOrderButton.disabled = true;
+return;
       }
 
       let totalItems = 0;
@@ -460,8 +470,9 @@ src="https://www.facebook.com/tr?id=1759693591926781&ev=PageView&noscript=1"
       });
 
       cartCount.textContent = totalItems;
-      cartTotal.textContent = `$${totalPrice.toLocaleString('es-MX')} MXN`;
-      checkoutButton.disabled = false;
+cartTotal.textContent = `$${totalPrice.toLocaleString('es-MX')} MXN`;
+checkoutButton.disabled = false;
+whatsappOrderButton.disabled = false;
     }
 
     document.querySelectorAll('.add-to-cart').forEach(button => {
@@ -528,6 +539,33 @@ src="https://www.facebook.com/tr?id=1759693591926781&ev=PageView&noscript=1"
         checkoutButton.disabled = false;
         checkoutButton.innerHTML = originalContent;
       }
+    });
+    whatsappOrderButton.addEventListener('click', () => {
+      if (cart.length === 0) return;
+
+      let total = 0;
+
+      const productos = cart.map(item => {
+        const subtotal = item.price * item.quantity;
+        total += subtotal;
+
+        return `${item.quantity} × ${item.name} — $${subtotal.toLocaleString('es-MX')} MXN`;
+      }).join('\n');
+
+      const mensaje =
+`Hola, quiero hacer un pedido en Octapet 🐾
+
+${productos}
+
+Subtotal: $${total.toLocaleString('es-MX')} MXN
+
+Quiero pagar por transferencia bancaria.`;
+
+      const telefono = '528261021187';
+
+      const url = `https://wa.me/${telefono}?text=${encodeURIComponent(mensaje)}`;
+
+      window.open(url, '_blank');
     });
 
     renderCart();
