@@ -1,0 +1,526 @@
+<!DOCTYPE html>
+<!DOCTYPE html>
+
+<html lang="es"><head><meta charset="utf-8"/><meta content="width=device-width,initial-scale=1" name="viewport"/><title>Octapet | Bienestar real para tu mascota</title><style>
+:root{--navy:#163a49;--blue:#c9edf0;--cream:#faf9f5;--ink:#18343d;--muted:#587079;--line:#dce7e6}*{box-sizing:border-box}body{margin:0;background:var(--cream);color:var(--ink);font:16px/1.55 system-ui,-apple-system,Segoe UI,sans-serif}a{color:inherit;text-decoration:none}.wrap{max-width:1160px;margin:auto;padding:0 24px}.top{background:var(--navy);color:#fff;text-align:center;padding:8px;font-size:12px;letter-spacing:.07em}.header{background:white;border-bottom:1px solid var(--line)}.header .wrap{min-height:78px;display:flex;align-items:center;justify-content:space-between;gap:20px}.logo{font-size:27px;font-weight:850;letter-spacing:-1.2px}.logo span{color:#40aab6}nav{display:flex;gap:25px;font-size:14px;font-weight:650;align-items:center}.btn{display:inline-block;background:var(--navy);color:white;padding:13px 23px;border-radius:100px;font-weight:750;font-size:14px}.btn.alt{background:white;color:var(--navy);border:1px solid #aacdd0}.hero{background:linear-gradient(120deg,#d5f0ef 0%,#eaf8f5 52%,#f8f5eb 100%);padding:86px 0}.hero .wrap{display:grid;grid-template-columns:1.15fr 1fr;gap:55px;align-items:center}.eyebrow{text-transform:uppercase;letter-spacing:.16em;font-size:12px;font-weight:850;color:#407e86}.hero h1{font-size:clamp(43px,5.5vw,72px);line-height:1.05;letter-spacing:-.05em;margin:18px 0 20px}.hero p{font-size:19px;max-width:540px;color:#3e626b}.actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:30px}.art{border-radius:32px;background:#fff9;min-height:380px;display:grid;place-content:center;text-align:center;border:1px solid #fff;box-shadow:0 24px 50px #285f6420;padding:35px}.art .paw{font-size:100px;line-height:1}.art strong{font-size:26px}.art small{color:var(--muted);margin-top:12px}.section{padding:76px 0}.section h2{font-size:clamp(30px,3.6vw,44px);letter-spacing:-.035em;line-height:1.16;margin:8px 0 15px}.intro{color:var(--muted);max-width:680px;margin-bottom:30px}.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}.card{background:white;border:1px solid var(--line);border-radius:22px;padding:28px}.card .icon{font-size:31px}.card h3{margin:12px 0 8px;font-size:20px}.card p{color:var(--muted);margin:0}.products{background:#eff7f5}.product{background:white;border:1px solid var(--line);border-radius:22px;overflow:hidden}.photo{height:200px;background:linear-gradient(145deg,#e0f2f1,#f4f6ed);display:grid;place-items:center;font-size:66px}.product .details{padding:22px}.product h3{margin:0 0 8px}.product p{color:var(--muted);min-height:48px;margin:0 0 16px}.price{font-size:23px;font-weight:850;margin-bottom:16px}.product .btn{width:100%;text-align:center}.story{background:#d4eff0}.story .wrap{display:grid;grid-template-columns:1fr 1fr;align-items:center;gap:55px}.storyvisual{background:#fff8;border-radius:28px;padding:70px 20px;text-align:center;font-size:76px}.contact{background:#fff}.contactbox{background:var(--navy);color:#fff;border-radius:28px;padding:42px;display:grid;grid-template-columns:1.15fr 1fr;gap:36px;align-items:center}.contactbox h2{margin-top:0;color:#fff}.contactbox p{color:#d7e5e8}.contactlinks{display:grid;grid-template-columns:1fr 1fr;gap:12px}.contactlink{background:#ffffff12;border:1px solid #ffffff30;border-radius:16px;padding:16px 18px;font-weight:750}.contactlink small{display:block;color:#bcd2d7;font-weight:500;margin-top:3px}.whatsapp{background:#fff;color:var(--navy);border-color:#fff}.socials{display:flex;gap:18px;flex-wrap:wrap;margin-top:18px;font-weight:700}.pack{background:#f7faf9}.packintro{max-width:720px;margin-bottom:28px}.packgrid{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}.dogcard{background:#fff;border:1px solid var(--line);border-radius:22px;overflow:hidden;box-shadow:0 8px 25px #163f4a0a}.dogphoto{aspect-ratio:1/1;background:linear-gradient(145deg,#dbecef,#f3e8dc);display:flex;align-items:center;justify-content:center;font-size:48px}.dogbody{padding:18px}.dogbody h3{margin:0 0 7px}.dogbody p{margin:0;font-size:14px;line-height:1.55;color:var(--muted)}.packmore{text-align:center;margin-top:26px}.packmore a{font-weight:750;text-decoration:underline;text-underline-offset:4px}.faq details{border-bottom:1px solid var(--line);padding:18px 0}.faq summary{font-weight:700;cursor:pointer}footer{background:var(--navy);color:#fff;padding:40px 0}footer p{color:#c8d9de;font-size:13px}.note{background:#fff4d6;color:#6c5619;padding:10px 24px;text-align:center;font-size:13px}@media(max-width:760px){nav{gap:10px;font-size:12px;flex-wrap:wrap;justify-content:flex-end}nav a:nth-child(2),nav a:nth-child(3){display:none}.header .wrap{min-height:70px}.hero{padding:52px 0}.hero .wrap,.story .wrap{grid-template-columns:1fr}.hero h1{font-size:48px}.art{min-height:250px}.grid{grid-template-columns:1fr}.section{padding:55px 0}.storyvisual{padding:35px}.photo{height:160px}.contactbox{grid-template-columns:1fr;padding:28px}.contactlinks{grid-template-columns:1fr}.packgrid{grid-template-columns:repeat(2,1fr)}}
+
+/* V7: tarjetas de producto consistentes */
+#productos .products{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:18px;background:transparent;align-items:stretch}
+#productos .product{min-width:0;display:flex;flex-direction:column;overflow:hidden;border-radius:22px;background:#fff;border:1px solid var(--line)}
+#productos .product .photo{height:195px;display:flex;align-items:center;justify-content:center;padding:18px;background:linear-gradient(145deg,#e0f2f1,#f4f6ed)}
+#productos .product .photo img{width:100%;height:100%;object-fit:contain}
+#productos .productbody{display:flex;flex:1;flex-direction:column;padding:20px}
+#productos .productbody h3{font-size:19px;line-height:1.25;margin:7px 0 9px}
+#productos .productbody p{min-height:0;margin:0 0 16px;line-height:1.5;font-size:14px}
+#productos .productbody .price{margin-top:auto;margin-bottom:14px;font-size:21px}
+#productos .productbody .btn{margin-top:auto;display:block;width:100%;text-align:center;padding:11px 10px}
+#productos .tag{display:inline-block;align-self:flex-start;background:#e6f4f2;border-radius:99px;padding:4px 10px;font-size:11px;font-weight:750;color:#315f67}
+#productos .product.is-future{opacity:.86}
+@media(max-width:1000px){#productos .products{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:520px){#productos .products{grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}#productos .product .photo{height:135px;padding:8px}#productos .productbody{padding:13px}#productos .productbody h3{font-size:16px}#productos .productbody p{font-size:12px}#productos .productbody .price{font-size:17px}#productos .productbody .btn{font-size:12px;padding:10px 5px}}
+
+/* V8: compra rápida + carrito */
+.cart-trigger{position:relative;display:inline-flex;align-items:center;gap:7px;border:1px solid rgba(18,58,72,.18);background:#fff;border-radius:999px;padding:10px 14px;font-weight:800;color:#123a48;cursor:pointer}
+.cart-badge{min-width:21px;height:21px;padding:0 6px;border-radius:999px;background:#123a48;color:white;display:inline-flex;align-items:center;justify-content:center;font-size:12px}
+.product-actions{display:grid;grid-template-columns:1fr 52px;gap:10px;margin-top:auto}
+.product-actions .btn{width:100%;margin:0}
+.quick-add{height:52px;border:0;border-radius:16px;background:#e9f4f1;color:#123a48;font-size:22px;font-weight:900;cursor:pointer;transition:.18s}
+.quick-add:hover{transform:translateY(-1px);background:#dceee9}
+.quick-add.added{font-size:16px}
+.cart-overlay{position:fixed;inset:0;background:rgba(0,0,0,.28);opacity:0;pointer-events:none;transition:.22s;z-index:9998}
+.cart-overlay.open{opacity:1;pointer-events:auto}
+.cart-drawer{position:fixed;right:0;top:0;height:100vh;width:min(430px,92vw);background:#fff;z-index:9999;transform:translateX(105%);transition:.25s;box-shadow:-20px 0 50px rgba(0,0,0,.14);display:flex;flex-direction:column}
+.cart-drawer.open{transform:translateX(0)}
+.cart-head{display:flex;align-items:center;justify-content:space-between;padding:22px;border-bottom:1px solid #e5ecea}
+.cart-head h2{margin:0;font-size:24px}
+.cart-close{border:0;background:transparent;font-size:30px;cursor:pointer;color:#123a48}
+.cart-items{padding:18px 22px;overflow:auto;flex:1}
+.cart-empty{color:#627982;padding:30px 0;text-align:center}
+.cart-row{display:grid;grid-template-columns:1fr auto;gap:12px;padding:15px 0;border-bottom:1px solid #edf1f0}
+.cart-row strong{display:block;margin-bottom:5px}
+.cart-controls{display:flex;align-items:center;gap:8px;margin-top:9px}
+.cart-controls button{width:30px;height:30px;border-radius:9px;border:1px solid #d6e1de;background:#fff;cursor:pointer;font-weight:800}
+.cart-remove{border:0!important;width:auto!important;color:#6c7e84;background:transparent!important;text-decoration:underline}
+.cart-foot{padding:20px 22px;border-top:1px solid #e5ecea}
+.cart-total{display:flex;justify-content:space-between;font-size:20px;font-weight:900;margin-bottom:14px}
+.checkout-btn{display:block;text-align:center;width:100%;box-sizing:border-box}
+.toast{position:fixed;left:50%;bottom:28px;transform:translate(-50%,25px);background:#123a48;color:#fff;padding:12px 18px;border-radius:999px;opacity:0;pointer-events:none;transition:.2s;z-index:10000;font-weight:700}
+.toast.show{opacity:1;transform:translate(-50%,0)}
+@media(max-width:700px){
+  .cart-label{display:none}
+  .cart-trigger{padding:9px 11px}
+  .product-actions{grid-template-columns:1fr 50px}
+}
+
+
+/* V9: comunicación de envío + incentivo a envío gratis */
+.shipping-bar{background:#123a48;color:#fff;text-align:center;padding:9px 14px;font-size:14px;letter-spacing:.1px}
+.shipping-bar strong:last-child{color:#dff3ec}
+.shipping-progress-box{background:#f4f8f7;border-radius:16px;padding:14px 15px;margin-bottom:16px}
+.shipping-message{font-size:14px;font-weight:800;color:#123a48;margin-bottom:9px}
+.shipping-track{height:8px;background:#dfe9e6;border-radius:999px;overflow:hidden}
+.shipping-fill{height:100%;width:0;background:#123a48;border-radius:999px;transition:width .25s ease}
+.shipping-scale{display:flex;justify-content:space-between;font-size:11px;color:#71838a;margin-top:6px}
+.shipping-line{display:flex;justify-content:space-between;gap:12px;font-size:14px;margin:7px 0;color:#51666e}
+.shipping-line.free{font-weight:800;color:#123a48}
+@media(max-width:600px){.shipping-bar{font-size:12px;padding:8px 10px}}
+
+
+/* V10: una sola franja superior, con envío gratis como mensaje dominante */
+.shipping-bar{
+  min-height:42px;
+  box-sizing:border-box;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  gap:9px;
+  flex-wrap:wrap;
+  background:#123a48;
+  color:#fff;
+  padding:7px 18px;
+  font-size:13px;
+  letter-spacing:0;
+}
+.shipping-main{font-weight:650}
+.shipping-sep{opacity:.55}
+.shipping-free{
+  display:inline-flex;
+  align-items:center;
+  background:#eef8f4;
+  color:#123a48 !important;
+  border-radius:999px;
+  padding:5px 11px;
+  font-size:12px;
+  font-weight:900;
+  letter-spacing:.25px;
+}
+.shipping-brand{
+  margin-left:10px;
+  padding-left:18px;
+  border-left:1px solid rgba(255,255,255,.28);
+  font-size:11px;
+  text-transform:uppercase;
+  letter-spacing:1.1px;
+  opacity:.78;
+}
+@media(max-width:760px){
+  .shipping-bar{gap:6px;padding:7px 9px}
+  .shipping-brand{display:none}
+  .shipping-sep{display:none}
+  .shipping-main{font-size:11px}
+  .shipping-free{font-size:10px;padding:4px 8px}
+}
+
+
+/* Ajustes finales Octapet */
+body{font-family:Montserrat,system-ui,sans-serif}
+.header{position:sticky;top:0;z-index:100;box-shadow:0 2px 15px #173b4a0b}
+.logo{white-space:nowrap;display:inline-flex;align-items:center;gap:1px}
+.logo i{font-size:24px;margin-left:6px;color:#26383d;transform:rotate(-18deg)}
+.art{padding:12px;overflow:hidden}
+.art img{width:100%;height:100%;max-height:400px;object-fit:contain}
+.storyvisual{padding:12px;overflow:hidden}
+.storyvisual img{display:block;width:100%;height:330px;object-fit:cover;border-radius:18px}
+.shipping-bar{font-size:16px;min-height:49px}
+.shipping-main{font-size:15px}.shipping-free{font-size:15px}.shipping-brand{font-size:13px}
+.product-actions .btn{margin-top:0!important;display:flex!important;align-items:center;justify-content:center;min-height:52px}
+.product .productbody{min-width:0}
+.dogphoto img{display:block;width:100%;height:100%;object-fit:cover}
+.cart-foot .checkout-btn{border:0;cursor:pointer;font-family:inherit}
+@media(max-width:900px){.header .wrap{flex-wrap:wrap;padding-top:12px;padding-bottom:12px}header nav{gap:10px}header nav a{font-size:12px}}
+@media(max-width:600px){.shipping-bar{font-size:12px}.shipping-main{font-size:12px}.shipping-free{font-size:11px}.shipping-brand{display:none}.header .wrap{gap:10px}.logo{font-size:23px}header nav{flex:1;justify-content:flex-end}header nav a:not(.btn){display:none}header nav .btn{padding:9px 13px;font-size:12px}.hero{padding:45px 0}.hero h1{font-size:clamp(36px,9vw,48px)}.art{min-height:220px}.dogphoto{font-size:0}}
+</style><meta content="Suplementos y cuidado para perros y gatos. Fórmulas con propósito, nacidas de nuestra manada. Compra Octapet en México." name="description"/><link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&amp;display=swap" rel="stylesheet"/><link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" rel="stylesheet"/><script>!function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,document,'script','https://connect.facebook.net/en_US/fbevents.js');fbq('init','1759693591926781');fbq('track','PageView');</script><style>
+.story img,.story-image img,.historia img,.history img,[class*="story"] img,[class*="historia"] img{width:100%;height:auto!important;max-height:none!important;object-fit:contain!important;object-position:center!important;display:block}
+.story-image,.historia-image,.history-image,[class*="story-image"],[class*="historia-image"]{height:auto!important;overflow:visible!important}
+.contact-v13{background:linear-gradient(135deg,#eef9f8,#faf8f2);padding:76px 5%;color:#173946}.contact-v13-inner{max-width:1320px;margin:auto;display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:center}.contact-v13-copy h2{font-size:clamp(36px,4vw,62px);line-height:1.03;margin:10px 0 20px}.contact-v13-copy p{font-size:19px;line-height:1.6;color:#58717a}.contact-v13-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px}.contact-v13-card{display:flex;gap:14px;align-items:center;min-height:105px;padding:20px;background:#fff;border:1px solid #d8e7e5;border-radius:20px;text-decoration:none;color:#173946}.contact-v13-card strong,.contact-v13-card small{display:block}.contact-v13-card strong{font-size:18px;margin-bottom:5px}.contact-v13-card small{color:#667d85;overflow-wrap:anywhere}.contact-icon{width:40px;height:40px;flex:0 0 40px;border-radius:50%;display:grid;place-items:center;background:#e8f5f3;font-weight:900}
+.brand-v13{display:inline-flex;align-items:center;text-decoration:none}.brand-v13-copy{font-weight:950;font-size:34px;letter-spacing:-2.2px;color:#173946}.brand-v13-copy .pet{color:#43b7c3}.brand-v13-paw{font-size:29px;margin-left:7px;transform:rotate(-14deg);display:inline-block}
+@media(max-width:850px){.contact-v13-inner{grid-template-columns:1fr}.contact-v13-grid{grid-template-columns:1fr 1fr}}@media(max-width:560px){.contact-v13-grid{grid-template-columns:1fr}}
+</style><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&display=swap" rel="stylesheet"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"><style>
+/* Logo exact structure and style from Octapet original */
+.original-brand{display:flex;align-items:center;gap:12px;color:#102238;white-space:nowrap}.original-brand .brand-paw{width:48px;height:48px;border:2px solid currentColor;border-radius:50%;display:grid;place-items:center;font-size:22px}.original-brand .brand-copy{display:grid;line-height:1}.original-brand .brand-copy strong{font-size:28px;letter-spacing:.04em;font-weight:900}.original-brand .brand-copy small{margin-top:6px;font-size:10px;letter-spacing:.3em}
+/* Original hero from live index: full bleed photo with left-side gradient */
+.original-hero{position:relative;min-height:820px;overflow:hidden;background:#f8fbff;display:flex;align-items:center;padding:0;font-family:Montserrat,system-ui,sans-serif}
+.original-hero .hero-art{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center;display:block}
+.original-hero .hero-shade{position:absolute;inset:0;background:linear-gradient(90deg,rgba(255,255,255,.98) 0%,rgba(255,255,255,.93) 29%,rgba(255,255,255,.46) 49%,rgba(255,255,255,0) 68%)}
+.original-hero .hero-content{position:relative;z-index:2;width:min(1180px,calc(100% - 40px));margin:auto;padding-top:85px}
+.original-hero .hero-copy{max-width:570px}.original-hero .hero-eyebrow{color:#1e5f99;font-size:13px;letter-spacing:.14em;font-weight:800;margin:0 0 12px}
+.original-hero h1{font-size:clamp(50px,5.3vw,82px);line-height:1.03;letter-spacing:-.055em;margin:0 0 24px;font-weight:900;color:#102238}.original-hero h1 span{color:#438ccc}
+.original-hero .hero-lead{font-size:20px;color:#43566b;max-width:560px;margin:0 0 30px}.original-hero .hero-actions{display:flex;gap:14px;flex-wrap:wrap}
+.original-hero .btn{min-height:54px;padding:0 24px;border-radius:999px;display:inline-flex;align-items:center;justify-content:center;gap:12px;font-weight:800;width:auto}.original-hero .btn-primary{background:#438ccc;color:#fff;box-shadow:0 12px 28px rgba(67,140,204,.3)}.original-hero .btn-ghost{background:rgba(255,255,255,.75);border:1px solid #dbeaf6;color:#102238}
+.original-hero .hero-trust{display:flex;gap:0;margin-top:48px}.original-hero .hero-trust div{display:flex;align-items:center;gap:10px;padding-right:24px;margin-right:24px;border-right:1px solid #b8cde0;max-width:165px;font-size:12px;font-weight:700}.original-hero .hero-trust div:last-child{border:0;margin:0;padding:0}.original-hero .hero-trust i{font-size:25px;color:#438ccc}
+.original-hero .scroll-cue{position:absolute;z-index:3;bottom:18px;left:50%;transform:translateX(-50%);width:52px;height:52px;border-radius:50%;background:#fff;color:#438ccc;display:grid;place-items:center;box-shadow:0 8px 30px rgba(25,74,115,.18)}
+/* Contact cards with actual Font Awesome brand logos */
+.contact-v13-card{min-width:0;gap:12px}.contact-v13-card>span:last-child{min-width:0}.contact-v13-card small{font-size:clamp(11px,.93vw,14px);overflow-wrap:normal;word-break:normal;white-space:nowrap;letter-spacing:-.025em}.contact-v13-card .contact-icon{font-size:25px;flex-basis:44px;width:44px;height:44px}
+.contact-v13-card:has(.fa-whatsapp) .contact-icon{background:#e5f8eb;color:#25D366}.contact-v13-card:has(.fa-instagram) .contact-icon{background:#fff0f5;color:#c13584}.contact-v13-card:has(.fa-facebook-f) .contact-icon{background:#eaf2ff;color:#1877F2}.contact-v13-card:has(.fa-envelope) .contact-icon{background:#e5f5f5;color:#3194a0}
+.contact-v13-card:hover{transform:translateY(-2px);box-shadow:0 12px 30px #17394613}
+@media(max-width:1050px){.contact-v13-card small{white-space:normal;overflow-wrap:anywhere}.contact-v13-grid{grid-template-columns:1fr 1fr}}
+@media(max-width:760px){.original-hero{display:block;min-height:auto;padding:0;background:#fff}.original-hero .hero-art{position:relative;width:100%;height:auto;max-height:none;object-fit:contain}.original-hero .hero-shade{display:none}.original-hero .hero-content{padding:26px 0 44px}.original-hero .hero-copy{max-width:none}.original-hero h1{font-size:43px}.original-hero .hero-lead{font-size:16px}.original-hero .hero-actions{display:grid;grid-template-columns:1fr}.original-hero .btn{width:100%}.original-hero .hero-trust{display:grid;grid-template-columns:1fr;gap:11px;margin-top:26px}.original-hero .hero-trust div{border:0;margin:0;padding:0;max-width:none}.original-hero .scroll-cue{display:none}.original-brand .brand-copy strong{font-size:20px}.original-brand .brand-copy small{font-size:8px}.original-brand .brand-paw{width:38px;height:38px;font-size:18px}}
+@media(max-width:560px){.contact-v13-grid{grid-template-columns:1fr}.contact-v13-card small{white-space:normal;overflow-wrap:anywhere}}
+</style>
+<style>
+/* V18 — footer limpio y único */
+.footer-v18{background:var(--navy);color:#fff;padding:46px 0}
+.footer-v18 .wrap{display:flex;flex-direction:column;align-items:flex-start}
+.footer-v18-brand{display:inline-flex;align-items:center;text-decoration:none;margin:0 0 12px}
+.footer-v18-brand .brand-paw{display:inline-flex;align-items:center;justify-content:center;margin-right:9px;color:#43b7c3;font-size:24px}
+.footer-v18-brand .brand-copy{display:flex;flex-direction:column;line-height:1}
+.footer-v18-brand .brand-copy strong{font-size:27px;letter-spacing:.8px;color:#fff}
+.footer-v18-brand .brand-copy small{font-size:9px;letter-spacing:2.2px;color:#9ed9df;margin-top:5px}
+.footer-v18 .tagline{margin:5px 0 20px;color:#c8d9de;font-size:14px}
+.footer-v18 .socials{display:flex;gap:24px;flex-wrap:wrap}
+.footer-v18 .socials a{color:#fff;text-decoration:none;font-weight:750;font-size:14px}
+.footer-v18 .socials a:hover{text-decoration:underline}
+@media(max-width:600px){.footer-v18{padding:38px 0}.footer-v18 .socials{gap:16px}}
+</style>
+
+<style>
+/* V19 — revisión responsive móvil */
+html,body{max-width:100%;overflow-x:hidden}
+@media(max-width:600px){
+  .wrap{width:min(100% - 32px,1180px)!important}
+  h1{font-size:clamp(38px,12vw,56px)!important;line-height:1.02!important}
+  h2{font-size:clamp(30px,9vw,42px)!important;line-height:1.08!important}
+
+  /* Hero */
+  .hero,.hero-grid,[class*="hero-inner"]{min-height:auto!important}
+  .hero-grid,[class*="hero-grid"]{grid-template-columns:1fr!important;gap:26px!important}
+  .hero-copy,[class*="hero-copy"]{max-width:100%!important}
+  .hero-actions,[class*="hero-actions"]{display:flex!important;flex-direction:column!important;align-items:stretch!important;gap:10px!important}
+  .hero-actions a,[class*="hero-actions"] a{width:100%!important;box-sizing:border-box!important;text-align:center!important}
+  .hero img,[class*="hero"] img{max-width:100%!important;height:auto!important}
+
+  /* Products / pack cards */
+  .products-grid,.product-grid,[class*="products-grid"],[class*="product-grid"]{grid-template-columns:1fr!important}
+  .product-card,[class*="product-card"]{min-width:0!important}
+  .product-card img,[class*="product-card"] img{max-width:100%!important}
+  .product-actions,[class*="product-actions"]{display:grid!important;grid-template-columns:1fr auto!important;gap:10px!important}
+
+  /* Story/manada */
+  .story-grid,.history-grid,.manada-grid,[class*="story-grid"],[class*="history-grid"],[class*="manada-grid"]{grid-template-columns:1fr!important}
+  .story img,.story-image img,.historia img,.history img,[class*="story"] img,[class*="historia"] img{width:100%!important;height:auto!important;object-fit:contain!important}
+
+  /* Contact */
+  .contact-v13-inner{grid-template-columns:1fr!important;gap:28px!important}
+  .contact-v13-grid{grid-template-columns:1fr!important}
+  .contact-v13-card{min-width:0!important;width:100%!important;box-sizing:border-box!important}
+  .contact-v13-card small{white-space:normal!important;overflow-wrap:anywhere!important;word-break:normal!important}
+
+  /* Cart drawer cannot exceed viewport */
+  .cart-drawer,[class*="cart-drawer"],.drawer,[class*="drawer"]{max-width:100vw!important;width:min(92vw,420px)!important}
+
+  /* Footer */
+  .footer-v18 .wrap{align-items:flex-start!important}
+  .footer-v18 .socials{gap:14px 20px!important}
+}
+</style>
+<style>
+.experiencias{padding:78px 0;background:#f7fbfa}.experiencias-head{text-align:center;max-width:760px;margin:0 auto 38px}.experiencias-head .eyebrow{font-weight:900;letter-spacing:2px;color:#3d8994;font-size:13px}.experiencias-head h2{margin:9px 0 12px;color:#173946;font-size:clamp(34px,4vw,52px);line-height:1.05}.experiencias-head p{margin:0;color:#667d85;font-size:17px;line-height:1.55}.experiencias-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}.experiencia-card{background:#fff;border:1px solid #dce9e7;border-radius:22px;padding:25px;box-shadow:0 10px 28px rgba(23,57,70,.055);display:flex;flex-direction:column;min-height:275px}.experiencia-producto{display:inline-flex;align-self:flex-start;padding:7px 11px;border-radius:999px;background:#eaf6f4;color:#28727b;font-size:12px;font-weight:900;margin-bottom:18px}.experiencia-card blockquote{margin:0;color:#173946;font-size:18px;font-weight:800;line-height:1.38}.experiencia-card .detalle{color:#667d85;font-size:14px;line-height:1.55;margin:13px 0 18px}.experiencia-card .perfil{margin-top:auto;border-top:1px solid #edf2f1;padding-top:14px;color:#789096;font-size:12px;font-weight:750}.experiencias-nota{max-width:900px;margin:24px auto 0;text-align:center;color:#819297;font-size:12px;line-height:1.5}@media(max-width:980px){.experiencias-grid{grid-template-columns:repeat(2,1fr)}}@media(max-width:600px){.experiencias{padding:56px 0}.experiencias-grid{grid-template-columns:1fr}.experiencia-card{min-height:0}.experiencias-head{text-align:left;margin-bottom:26px}}
+</style>
+<style>
+.reviews-v21{padding:80px 0;background:linear-gradient(180deg,#f5fbfa 0%,#fff 100%);overflow:hidden}
+.reviews-v21-head{text-align:center;max-width:760px;margin:0 auto 38px}
+.reviews-kicker{font-size:13px;font-weight:900;letter-spacing:1.8px;color:#32818b}
+.reviews-v21-head h2{margin:9px 0 11px;color:#173946;font-size:clamp(34px,4vw,50px);line-height:1.05}
+.reviews-v21-head p{margin:0;color:#6b8087;font-size:16px}
+.reviews-window{position:relative;max-width:920px;margin:0 auto;overflow:hidden;padding:8px 62px 18px}
+.reviews-track{display:flex;transition:transform .55s cubic-bezier(.22,.61,.36,1)}
+.review-slide{min-width:100%;box-sizing:border-box;background:#fff;border:1px solid #dce9e7;border-radius:26px;padding:34px 40px 30px;box-shadow:0 14px 38px rgba(23,57,70,.08);position:relative}
+.review-mark{position:absolute;right:28px;top:8px;font-family:Georgia,serif;font-size:88px;line-height:1;color:#dcefed;opacity:.9}
+.review-paws{font-size:16px;letter-spacing:3px;margin-bottom:17px;filter:saturate(.8)}
+.review-slide h3{position:relative;margin:0 0 13px;max-width:700px;color:#173946;font-size:clamp(22px,3vw,30px);line-height:1.18}
+.review-slide p{margin:0;max-width:740px;color:#5f747c;font-size:16px;line-height:1.65}
+.review-meta{display:flex;gap:10px;align-items:center;flex-wrap:wrap;margin-top:24px;padding-top:18px;border-top:1px solid #edf3f2}
+.review-meta strong{background:#e8f5f3;color:#26727b;padding:7px 11px;border-radius:999px;font-size:12px}
+.review-meta span{color:#809198;font-size:12px;font-weight:700}
+.review-arrow{position:absolute;top:50%;transform:translateY(-50%);width:42px;height:42px;border-radius:50%;border:1px solid #d4e5e2;background:#fff;color:#246e77;font-size:30px;line-height:1;cursor:pointer;box-shadow:0 6px 20px rgba(23,57,70,.09);z-index:2}
+.review-prev{left:7px}.review-next{right:7px}.review-arrow:hover{transform:translateY(-50%) scale(1.05)}
+.review-dots{display:flex;justify-content:center;gap:8px;margin-top:4px}
+.review-dot{width:8px;height:8px;border:0;border-radius:50%;background:#c8d9d7;padding:0;cursor:pointer;transition:.2s}
+.review-dot.active{width:24px;border-radius:99px;background:#38858e}
+.reviews-note{max-width:850px;margin:21px auto 0;text-align:center;color:#87979c;font-size:11px;line-height:1.45}
+@media(max-width:650px){
+ .reviews-v21{padding:58px 0}
+ .reviews-v21-head{text-align:left;margin-bottom:26px}
+ .reviews-window{padding:6px 6px 14px}
+ .review-slide{padding:28px 23px 25px;border-radius:22px}
+ .review-mark{right:17px;font-size:68px}
+ .review-arrow{width:36px;height:36px;top:auto;bottom:27px}
+ .review-prev{left:18px}.review-next{right:18px}
+ .review-meta{padding-left:38px;padding-right:38px;justify-content:center;text-align:center}
+}
+</style>
+
+<style>
+/* V23 — mayor jerarquía para la barra superior */
+.topbar, .top-bar, .shipping-bar, .announcement-bar {
+  min-height: 82px !important;
+}
+.topbar .wrap, .top-bar .wrap, .shipping-bar .wrap, .announcement-bar .wrap {
+  min-height: 82px !important;
+  gap: 20px !important;
+}
+</style>
+
+<style>
+/* V23 final — barra superior */
+.shipping-bar{
+  min-height:82px !important;
+  padding:12px 22px !important;
+  gap:20px !important;
+  display:flex !important;
+  align-items:center !important;
+  justify-content:center !important;
+}
+.shipping-main{
+  font-size:18px !important;
+  font-weight:850 !important;
+}
+.shipping-free{
+  font-size:17px !important;
+  font-weight:950 !important;
+  padding:12px 20px !important;
+  border-radius:999px !important;
+  background:#70d8d0 !important;
+  color:#123e4a !important;
+  box-shadow:0 4px 14px rgba(0,0,0,.10) !important;
+}
+.shipping-brand{
+  font-size:14px !important;
+  letter-spacing:1.7px !important;
+  opacity:.86 !important;
+  padding-left:20px !important;
+  border-left:1px solid rgba(255,255,255,.22) !important;
+}
+.shipping-sep{opacity:.55 !important}
+@media(max-width:760px){
+ .shipping-bar{min-height:auto !important;padding:10px 12px !important;gap:8px 10px !important;flex-wrap:wrap !important}
+ .shipping-main{font-size:14px !important}
+ .shipping-free{font-size:13px !important;padding:8px 11px !important}
+ .shipping-brand{display:none !important}
+ .shipping-sep{display:none !important}
+}
+</style>
+</head><body><div class="shipping-bar">
+<span class="shipping-main">🚚 Envío $130 a todo México</span>
+<span class="shipping-sep">·</span>
+<span class="shipping-free">ENVÍO GRATIS DESDE $750</span>
+<span class="shipping-brand">Bienestar real para tu mascota</span>
+</div>
+<header class="header"><div class="wrap"><a href="#inicio" class="brand original-brand" aria-label="Octapet, inicio"><span class="brand-paw"><i class="fa-solid fa-paw"></i></span><span class="brand-copy"><strong>OCTAPET</strong><small>BIENESTAR REAL</small></span></a><nav><a href="#productos">Productos</a><a href="#manada">La manada</a><a href="#valores">Nosotros</a><a href="#contacto">Contacto</a><a class="btn" href="comprar.html">Comprar</a><button aria-label="Ver carrito" class="cart-trigger" id="cartTrigger" type="button">🛒 <span class="cart-label">Carrito</span><span class="cart-badge" id="cartCount">0</span></button></nav></div></header><main id="inicio"><section class="hero original-hero" aria-labelledby="hero-title"><img src="https://raw.githubusercontent.com/comentarios-ctrl/octapet-web/main/img/hero-octapet-caricatura.png" alt="Ilustración de la manada Octapet" class="hero-art"><div class="hero-shade"></div><div class="hero-content container"><div class="hero-copy"><p class="eyebrow hero-eyebrow"><i class="fa-regular fa-heart"></i> Nacido de una manada real</p><h1 id="hero-title">Bienestar real<br><span>para tu mascota.</span></h1><p class="hero-lead">Suplementos e higiene para perros y gatos.</p><div class="hero-actions"><a href="comprar.html" class="btn btn-primary">Comprar ahora <i class="fa-solid fa-bag-shopping"></i></a><a href="#productos" class="btn btn-ghost">Conocer productos</a></div><div class="hero-trust"><div><i class="fa-solid fa-dog"></i><span>Nacido de 8 perros</span></div><div><i class="fa-solid fa-leaf"></i><span>Ingredientes seleccionados</span></div><div><i class="fa-solid fa-tag"></i><span>Calidad a precio justo</span></div></div></div></div><a class="scroll-cue" href="#productos" aria-label="Bajar a productos"><i class="fa-solid fa-paw"></i></a></section><section class="section" id="valores"><div class="wrap"><div class="eyebrow">Lo que nos mueve</div><h2>¿Por qué Octapet?</h2><div class="grid"><article class="card"><div class="icon">🧪</div><h3>Fórmulas con propósito</h3><p>Cada ingrediente está ahí por una razón, en una formulación pensada para una necesidad específica.</p></article><article class="card"><div class="icon">🐾</div><h3>Nacido de 8 perros</h3><p>Conocemos de primera mano que cada mascota tiene necesidades diferentes.</p></article><article class="card"><div class="icon">💙</div><h3>Calidad a precio justo</h3><p>Ingredientes seleccionados, formulaciones transparentes y precios razonables.</p></article></div></div></section><section class="section" id="productos">
+<div class="wrap">
+<div class="eyebrow">Para perros y gatos</div>
+<h2>Nuestros productos</h2>
+<p style="max-width:760px;margin-bottom:34px">Conoce toda la línea Octapet. Productos pensados para necesidades específicas de suplementación, higiene y cuidado diario.</p>
+<h3 style="margin:32px 0 16px">Suplementos para perros</h3>
+<div class="products">
+<article class="product"><div class="photo"><img alt="Producto Octapet: Articular" loading="lazy" src="https://raw.githubusercontent.com/comentarios-ctrl/octapet-web/main/img/articular-perros.jpg"/></div><div class="productbody"><span class="tag">Movilidad</span><h3>Soporte Articular</h3><p>Apoyo nutricional para articulaciones, movilidad y bienestar diario.</p><div class="price">$499 MXN</div><div class="product-actions"><a class="btn small" href="articular-perros.html">Ver Articular →</a><button aria-label="Agregar Soporte Articular al carrito" class="quick-add" data-id="articular" data-image="img/articular-perros.jpg" data-name="Soporte Articular" data-price="499" title="Agregar al carrito" type="button">🛒+</button></div></div></article>
+<article class="product"><div class="photo"><img alt="Producto Octapet: Cardio+" loading="lazy" src="https://raw.githubusercontent.com/comentarios-ctrl/octapet-web/main/img/cardio.jpg"/></div><div class="productbody"><span class="tag">Bienestar cardiovascular</span><h3>Octapet Cardio</h3><p>Fórmula nutricional pensada para acompañar el cuidado cardiovascular.</p><div class="price">$449 MXN</div><div class="product-actions"><a class="btn small" href="cardio.html">Ver Cardio+ →</a><button aria-label="Agregar Octapet Cardio al carrito" class="quick-add" data-id="cardio" data-image="img/cardio.jpg" data-name="Octapet Cardio" data-price="449" title="Agregar al carrito" type="button">🛒+</button></div></div></article>
+<article class="product"><div class="photo"><img alt="Producto Octapet: Control de Peso" loading="lazy" src="https://raw.githubusercontent.com/comentarios-ctrl/octapet-web/main/img/peso-ideal.jpg"/></div><div class="productbody"><span class="tag">Saciedad</span><h3>Sacia</h3><p>Complemento para apoyar una rutina de alimentación y control de peso.</p><div class="price">$249 MXN</div><div class="product-actions"><a class="btn small" href="control-peso-perros.html">Ver producto →</a><button aria-label="Agregar Sacia al carrito" class="quick-add" data-id="sacia" data-image="img/peso-ideal.jpg" data-name="Sacia" data-price="249" title="Agregar al carrito" type="button">🛒+</button></div></div></article>
+<article class="product"><div class="photo"><img alt="Producto Octapet: Salud Visual" loading="lazy" src="https://raw.githubusercontent.com/comentarios-ctrl/octapet-web/main/img/salud-visual.png"/></div><div class="productbody"><span class="tag">Cuidado visual</span><h3>Salud Visual</h3><p>Fórmula pensada para acompañar el cuidado nutricional de la salud visual.</p><div class="price">$599 MXN</div><div class="product-actions"><a class="btn small" href="salud-visual-perros.html">Ver producto →</a><button aria-label="Agregar Salud Visual al carrito" class="quick-add" data-id="salud-visual" data-image="img/salud-visual.png" data-name="Salud Visual" data-price="599" type="button">🛒+</button></div></div></article>
+</div>
+<h3 style="margin:46px 0 16px">Cuidado e higiene para perros</h3>
+<div class="products">
+<article class="product"><div class="photo"><img alt="Producto Octapet: Shampoo Hidratante" loading="lazy" src="https://raw.githubusercontent.com/comentarios-ctrl/octapet-web/main/img/shampoo-hidratante.png"/></div><div class="productbody"><span class="tag">Hidratación</span><h3>Shampoo Hidratante</h3><p>Limpieza suave para cuidar piel y pelaje durante el baño.</p><div class="price">$249 MXN</div><div class="product-actions"><a class="btn small" href="shampoo-hidratante.html">Ver producto →</a><button aria-label="Agregar Shampoo Hidratante al carrito" class="quick-add" data-id="shampoo-hidratante" data-image="img/shampoo-hidratante.png" data-name="Shampoo Hidratante" data-price="249" title="Agregar al carrito" type="button">🛒+</button></div></div></article>
+<article class="product"><div class="photo"><img alt="Producto Octapet: Limpieza Esencial" loading="lazy" src="https://raw.githubusercontent.com/comentarios-ctrl/octapet-web/main/img/shampoo-esencial.png"/></div><div class="productbody"><span class="tag">Limpieza</span><h3>Shampoo Esencial</h3><p>Una opción práctica para la limpieza cotidiana de tu perro.</p><div class="price">$150 MXN</div><div class="product-actions"><a class="btn small" href="shampoo-limpieza-efectiva.html">Ver producto →</a><button aria-label="Agregar Shampoo Esencial al carrito" class="quick-add" data-id="shampoo-esencial" data-image="img/shampoo-esencial.png" data-name="Shampoo Esencial" data-price="150" title="Agregar al carrito" type="button">🛒+</button></div></div></article>
+<article class="product"><div class="photo"><img alt="Producto Octapet: Acondicionador Hidratante" loading="lazy" src="https://raw.githubusercontent.com/comentarios-ctrl/octapet-web/main/img/acondicionador-hidratante.png"/></div><div class="productbody"><span class="tag">Pelaje</span><h3>Acondicionador Desenredante</h3><p>Ayuda a mantener el pelaje suave y manejable después del baño.</p><div class="price">$249 MXN</div><div class="product-actions"><a class="btn small" href="acondicionador-hidratante.html">Ver producto →</a><button aria-label="Agregar Acondicionador Desenredante al carrito" class="quick-add" data-id="acondicionador" data-image="img/acondicionador-hidratante.png" data-name="Acondicionador Desenredante" data-price="249" title="Agregar al carrito" type="button">🛒+</button></div></div></article>
+</div>
+<h3 style="margin:46px 0 16px">Para gatos</h3>
+<div class="products">
+<article class="product"><div class="photo"><img alt="Producto Octapet: Shampoo Hidratante" loading="lazy" src="https://raw.githubusercontent.com/comentarios-ctrl/octapet-web/main/img/gatos-hidratante.png"/></div><div class="productbody"><span class="tag">Sin fragancia</span><h3>Shampoo Hidratante para Gatos</h3><p>Limpieza e hidratación pensadas para las necesidades del gato.</p><div class="price">$249 MXN</div><div class="product-actions"><a class="btn small" href="shampoo-hidratante-gatos.html">Ver producto →</a><button aria-label="Agregar Shampoo Hidratante para Gatos al carrito" class="quick-add" data-id="shampoo-gatos" data-image="img/gatos-hidratante.png" data-name="Shampoo Hidratante para Gatos" data-price="249" title="Agregar al carrito" type="button">🛒+</button></div></div></article>
+<article class="product"><div class="photo"><img alt="Producto Octapet: Vitalidad y Pelaje" loading="lazy" src="https://raw.githubusercontent.com/comentarios-ctrl/octapet-web/main/img/vitalidad-felina.png"/></div><div class="productbody"><span class="tag">Piel y pelaje</span><h3>Vitalidad y Pelaje</h3><p>Suplemento nutricional pensado para acompañar vitalidad, piel y pelaje.</p><div class="price">Consulta precio en la ficha</div><a class="btn small" href="vitalidad-pelaje-gatos.html">Ver producto →</a></div></article>
+<article class="product is-future"><div class="photo">🐱</div><div class="productbody"><span class="tag">En desarrollo</span><h3>Sacia Plus</h3><p>Fórmula para complementar una estrategia de control de peso.</p><div class="price">Próximamente</div></div></article>
+</div>
+</div>
+</section>
+<section class="reviews-v21" id="experiencias">
+  <div class="wrap">
+    <div class="reviews-v21-head">
+      <div class="reviews-kicker">LO QUE DICEN DE OCTAPET 🐾</div>
+      <h2>Experiencias que hablan por sí solas</h2>
+      <p>Historias compartidas después de incorporar nuestros productos a su rutina.</p>
+    </div>
+
+    <div class="reviews-window">
+      <div class="reviews-track" id="reviewsTrack">
+        <article class="review-slide">
+          <div class="review-mark">“</div>
+          <div class="review-paws" aria-hidden="true">🐾 🐾 🐾 🐾 🐾</div>
+          <h3>El cambio en su movilidad ha sido muy evidente.</h3>
+          <p>Empezamos a notar que caminaba con muchas más ganas y que buscaba moverse mucho más que antes.</p>
+          <div class="review-meta"><strong>Articular</strong><span>Perro senior</span></div>
+        </article>
+
+        <article class="review-slide">
+          <div class="review-mark">“</div>
+          <div class="review-paws" aria-hidden="true">🐾 🐾 🐾 🐾 🐾</div>
+          <h3>En unas semanas ya se movía mucho mejor.</h3>
+          <p>La familia de una Labrador senior observó mayor actividad y movilidad aproximadamente a las tres semanas de incorporarlo a su rutina.</p>
+          <div class="review-meta"><strong>Articular</strong><span>Labrador senior · experiencia compartida por su familia</span></div>
+        </article>
+
+        <article class="review-slide">
+          <div class="review-mark">“</div>
+          <div class="review-paws" aria-hidden="true">🐾 🐾 🐾 🐾 🐾</div>
+          <h3>Por fin empezamos a ver menos caspa.</h3>
+          <p>Con el uso constante, la caspa fue disminuyendo progresivamente y la piel comenzó a verse mucho mejor.</p>
+          <div class="review-meta"><strong>Shampoo Hidratante</strong><span>Experiencia con Octapet</span></div>
+        </article>
+
+        <article class="review-slide">
+          <div class="review-mark">“</div>
+          <div class="review-paws" aria-hidden="true">🐾 🐾 🐾 🐾 🐾</div>
+          <h3>Ya no llega desesperada a la siguiente comida.</h3>
+          <p>Notamos mayor saciedad entre comidas y, acompañándolo con alimentación controlada, el peso ha ido bajando gradualmente.</p>
+          <div class="review-meta"><strong>Sacia Plus</strong><span>Experiencia con Octapet</span></div>
+        </article>
+
+        <article class="review-slide">
+          <div class="review-mark">“</div>
+          <div class="review-paws" aria-hidden="true">🐾 🐾 🐾 🐾 🐾</div>
+          <h3>Se ha mantenido muy bien en sus revisiones.</h3>
+          <p>Cardio+ forma parte de su rutina diaria junto con el seguimiento y tratamiento indicado por su médico veterinario, y hasta ahora ha evolucionado muy bien en sus revisiones.</p>
+          <div class="review-meta"><strong>Cardio+</strong><span>Perro senior · experiencia con Octapet</span></div>
+        </article>
+
+        <article class="review-slide">
+          <div class="review-mark">“</div>
+          <div class="review-paws" aria-hidden="true">🐾 🐾 🐾 🐾 🐾</div>
+          <h3>En unas tres semanas empecé a notar el cambio.</h3>
+          <p>Me gustó mucho cómo la vi después de empezar a usar Articular y además me sorprendió que durara más que otros suplementos que había comprado anteriormente.</p>
+          <div class="review-meta"><strong>Articular</strong><span>Compradora Octapet</span></div>
+        </article>
+      </div>
+
+      <button class="review-arrow review-prev" type="button" aria-label="Reseña anterior">‹</button>
+      <button class="review-arrow review-next" type="button" aria-label="Siguiente reseña">›</button>
+    </div>
+
+    <div class="review-dots" id="reviewDots" aria-label="Navegación de experiencias"></div>
+    <p class="reviews-note">Las experiencias son individuales y pueden variar. Los suplementos no sustituyen la valoración, atención ni tratamiento indicado por un médico veterinario.</p>
+  </div>
+</section>
+<section class="section story" id="historia"><div class="wrap"><div class="storyvisual"><img alt="La manada Octapet" src="https://raw.githubusercontent.com/comentarios-ctrl/octapet-web/main/img/manada-completa.jpeg"/></div><div><div class="eyebrow">Nuestra historia</div><h2>Todo comenzó con ocho perros.</h2><p>Octapet nació de la vida cotidiana con nuestra manada y de una convicción sencilla: el cuidado de nuestras mascotas merece atención, conocimiento y cariño.</p><a class="btn" href="#manada">Conoce a la manada →</a></div></div></section><section class="section pack" id="manada"><div class="wrap"><div class="packintro"><div class="eyebrow">Nacido de 8 perros</div><h2>Conoce a la manada</h2><p>Octapet nació en una casa con ocho perros, cada uno con su historia, personalidad y necesidades. Ellos son parte de por qué hacemos las cosas como las hacemos.</p></div><div class="packgrid">
+<article class="dogcard"><div class="dogphoto"><img alt="Coquis de la manada Octapet" loading="lazy" src="https://raw.githubusercontent.com/comentarios-ctrl/octapet-web/main/img/coquis.jpeg" style="width:100%;height:100%;object-fit:cover;aspect-ratio:1/1"/></div><div class="dogbody"><h3>Coquis</h3><p>Nuestra golden senior. Dulce, paciente y una de las grandes inspiraciones detrás del cuidado en cada etapa de vida.</p></div></article>
+<article class="dogcard"><div class="dogphoto"><img alt="Ratilla de la manada Octapet" loading="lazy" src="https://raw.githubusercontent.com/comentarios-ctrl/octapet-web/main/img/ratilla.jpg" style="width:100%;height:100%;object-fit:cover;aspect-ratio:1/1"/></div><div class="dogbody"><h3>Ratilla</h3><p>Pequeño, especial y con carácter. Nos ha enseñado cuánto cambia el cuidado cuando cada perro tiene necesidades distintas.</p></div></article>
+<article class="dogcard"><div class="dogphoto"><img alt="Maya de la manada Octapet" loading="lazy" src="https://raw.githubusercontent.com/comentarios-ctrl/octapet-web/main/img/maya.jpg" style="width:100%;height:100%;object-fit:cover;aspect-ratio:1/1"/></div><div class="dogbody"><h3>Maya</h3><p>Nuestra beagle y profesional de la comida. Con ella aprendimos que cuidar también significa encontrar equilibrio.</p></div></article>
+<article class="dogcard"><div class="dogphoto"><img alt="Terry de la manada Octapet" loading="lazy" src="https://raw.githubusercontent.com/comentarios-ctrl/octapet-web/main/img/terry.jpg" style="width:100%;height:100%;object-fit:cover;aspect-ratio:1/1"/></div><div class="dogbody"><h3>Terry</h3><p>El pequeño de la manada y probablemente el que más ruido hace. Mucha personalidad en pocos kilos.</p></div></article>
+<article class="dogcard"><div class="dogphoto"><img alt="Chilaquil de la manada Octapet" loading="lazy" src="https://raw.githubusercontent.com/comentarios-ctrl/octapet-web/main/img/chilaquil.jpg" style="width:100%;height:100%;object-fit:cover;aspect-ratio:1/1"/></div><div class="dogbody"><h3>Chilaquil</h3><p>Una historia de rescate que terminó convirtiéndose en familia. Porque a veces ellos son quienes nos encuentran.</p></div></article>
+<article class="dogcard"><div class="dogphoto"><img alt="Negrita de la manada Octapet" loading="lazy" src="https://raw.githubusercontent.com/comentarios-ctrl/octapet-web/main/img/negrita.jpg" style="width:100%;height:100%;object-fit:cover;aspect-ratio:1/1"/></div><div class="dogbody"><h3>Negrita</h3><p>Rescatada y convertida en parte indispensable de la casa. Una sobreviviente con una historia muy suya.</p></div></article>
+<article class="dogcard"><div class="dogphoto"><img alt="Moka de la manada Octapet" loading="lazy" src="https://raw.githubusercontent.com/comentarios-ctrl/octapet-web/main/img/moka.jpg" style="width:100%;height:100%;object-fit:cover;aspect-ratio:1/1"/></div><div class="dogbody"><h3>Moka</h3><p>Hija de una perrita de la calle y parte de nuestra familia. De esas historias que empiezan sin planearse.</p></div></article>
+<article class="dogcard"><div class="dogphoto"><img alt="Gordi de la manada Octapet" loading="lazy" src="https://raw.githubusercontent.com/comentarios-ctrl/octapet-web/main/img/gordi.jpg" style="width:100%;height:100%;object-fit:cover;aspect-ratio:1/1"/></div><div class="dogbody"><h3>Gordi</h3><p>Parte para siempre de nuestra manada. Su historia y todo lo que nos dejó también forman parte de Octapet.</p></div></article>
+</div><div class="packmore"></div></div></section><section class="contact-v13" id="contacto"><div class="contact-v13-inner"><div class="contact-v13-copy"><div class="eyebrow">HABLEMOS</div><h2>¿Tienes dudas? Estamos para ayudarte.</h2><p>Si quieres saber qué producto puede ajustarse mejor a las necesidades de tu mascota, escríbenos. Detrás de Octapet hay personas reales.</p></div><div class="contact-v13-grid"><a class="contact-v13-card" href="https://wa.me/528261021187" target="_blank"><span class="contact-icon"><i class="fa-brands fa-whatsapp"></i></span><span><strong>WhatsApp</strong><small>Escríbenos por WhatsApp →</small></span></a><a class="contact-v13-card" href="https://www.instagram.com/octapet.mx/" target="_blank"><span class="contact-icon"><i class="fa-brands fa-instagram"></i></span><span><strong>Instagram</strong><small>@octapet.mx</small></span></a><a class="contact-v13-card" href="https://www.facebook.com/profile.php?id=61591907513082" target="_blank" rel="noopener noreferrer"><span class="contact-icon"><i class="fa-brands fa-facebook-f"></i></span><span><strong>Facebook</strong><small>Octapet</small></span></a><a class="contact-v13-card" href="mailto:comentarios@octapet.com.mx"><span class="contact-icon"><i class="fa-regular fa-envelope"></i></span><span><strong>Correo</strong><small>comentarios@octapet.com.mx</small></span></a></div></div></section><section class="section faq"><div class="wrap"><div class="eyebrow">Antes de elegir</div><h2>Preguntas frecuentes</h2><details><summary>¿Cómo sé qué producto necesita mi mascota?</summary><p>Consulta la descripción y recomendaciones de cada producto. Ante enfermedades o tratamientos, pregunta a tu veterinario.</p></details><details><summary>¿Cómo se administra un suplemento?</summary><p>La dosis depende del producto y del peso de tu mascota. Revisa las indicaciones de su ficha y etiqueta.</p></details><details><summary>¿Tienes dudas antes de comprar?</summary><p>Escríbenos directamente. Queremos ayudarte a elegir la opción adecuada para tu mascota antes de que compres.</p></details></div></section></main>
+<footer class="footer-v18">
+  <div class="wrap">
+    <a href="#inicio" class="footer-v18-brand" aria-label="Octapet, inicio">
+      <span class="brand-paw"><i class="fa-solid fa-paw"></i></span>
+      <span class="brand-copy"><strong>OCTAPET</strong><small>BIENESTAR REAL</small></span>
+    </a>
+    <p class="tagline">Bienestar real para tu mascota.</p>
+    <div class="socials">
+      <a href="https://wa.me/528261021187" target="_blank" rel="noopener">WhatsApp</a>
+      <a href="https://www.instagram.com/octapet.mx/" target="_blank" rel="noopener">Instagram</a>
+      <a href="https://www.facebook.com/profile.php?id=61591907513082" target="_blank" rel="noopener">Facebook</a>
+    </div>
+  </div>
+</footer>
+
+<div class="cart-overlay" id="cartOverlay"></div>
+<aside aria-label="Carrito de compras" class="cart-drawer" id="cartDrawer">
+<div class="cart-head"><h2>Tu carrito</h2><button aria-label="Cerrar" class="cart-close" id="cartClose" type="button">×</button></div>
+<div class="cart-items" id="cartItems"></div>
+<div class="cart-foot">
+<div class="shipping-progress-box" id="shippingProgressBox">
+<div class="shipping-message" id="shippingMessage">Agrega productos para acercarte al envío gratis.</div>
+<div class="shipping-track"><div class="shipping-fill" id="shippingFill"></div></div>
+<div class="shipping-scale"><span>$0</span><span>$750 · envío gratis</span></div>
+</div>
+<div class="shipping-line" id="shippingCostLine"><span>Envío</span><span id="shippingCost">$130 MXN</span></div>
+<div class="cart-total"><span>Subtotal</span><span id="cartTotal">$0 MXN</span></div>
+<a class="btn checkout-btn" href="comprar.html">Finalizar compra →</a>
+</div>
+</aside>
+<div class="toast" id="cartToast">✓ Producto agregado al carrito</div>
+
+<script>(function(){
+'use strict';
+const KEY='octapetCart';
+const CATALOG={
+'articular':{id:'articular',name:'Soporte Articular',price:499,image:'img/articular-perros.jpg'},
+'cardio':{id:'cardio',name:'Octapet Cardio',price:449,image:'img/cardio.jpg'},
+'sacia':{id:'sacia',name:'Sacia',price:249,image:'img/peso-ideal.jpg'},
+'salud-visual':{id:'salud-visual',name:'Salud Visual',price:599,image:'img/salud-visual.png'},
+'shampoo-hidratante':{id:'shampoo-hidratante',name:'Shampoo Hidratante',price:249,image:'img/shampoo-hidratante.png'},
+'shampoo-esencial':{id:'shampoo-esencial',name:'Shampoo Esencial',price:150,image:'img/shampoo-esencial.png'},
+'acondicionador':{id:'acondicionador',name:'Acondicionador Desenredante',price:249,image:'img/acondicionador-hidratante.png'},
+'shampoo-gatos':{id:'shampoo-gatos',name:'Shampoo Hidratante para Gatos',price:249,image:'img/gatos-hidratante.png'}
+};
+const $=id=>document.getElementById(id);
+let cart=[];
+try {const saved=JSON.parse(localStorage.getItem(KEY)||'[]');if(Array.isArray(saved))cart=saved.filter(x=>CATALOG[x.id]&&Number.isInteger(x.quantity)&&x.quantity>0).map(x=>({...CATALOG[x.id],quantity:x.quantity}));}catch(e){cart=[];}
+const money=n=>'$'+n.toLocaleString('es-MX')+' MXN';
+const drawer=$('cartDrawer'),overlay=$('cartOverlay'),items=$('cartItems'),toast=$('cartToast');
+function save(){localStorage.setItem(KEY,JSON.stringify(cart));render();}
+function render(){
+ const count=cart.reduce((n,x)=>n+x.quantity,0),subtotal=cart.reduce((n,x)=>n+x.price*x.quantity,0);
+ $('cartCount').textContent=count;$('cartTotal').textContent=money(subtotal);
+ $('shippingFill').style.width=Math.min(100,subtotal/750*100)+'%';
+ $('shippingMessage').textContent=!subtotal?'Agrega productos para acercarte al envío gratis.':subtotal<750?'🚚 Te faltan '+money(750-subtotal)+' para obtener envío GRATIS':'🎉 ¡Tu pedido tiene envío GRATIS!';
+ $('shippingCost').textContent=subtotal>=750?'GRATIS':money(130);
+ $('shippingCostLine').classList.toggle('free',subtotal>=750);
+ items.replaceChildren();
+ if(!cart.length){const empty=document.createElement('div');empty.className='cart-empty';empty.textContent='Tu carrito está vacío. Agrega un producto y aparecerá aquí.';items.append(empty);return;}
+ cart.forEach(x=>{
+  const row=document.createElement('div');row.className='cart-row';
+  const info=document.createElement('div');const title=document.createElement('strong');title.textContent=x.name;info.append(title,document.createTextNode(money(x.price)));
+  const controls=document.createElement('div');controls.className='cart-controls';
+  [['−','minus'],[String(x.quantity),'qty'],['+','plus'],['Eliminar','remove']].forEach(([label,act])=>{
+   if(act==='qty'){const span=document.createElement('span');span.textContent=label;controls.append(span);return;}
+   const btn=document.createElement('button');btn.type='button';btn.textContent=label;btn.dataset.id=x.id;btn.dataset.act=act;if(act==='remove')btn.className='cart-remove';controls.append(btn);
+  });info.append(controls);const lineTotal=document.createElement('strong');lineTotal.textContent=money(x.price*x.quantity);row.append(info,lineTotal);items.append(row);
+ });
+}
+function open(){drawer.classList.add('open');overlay.classList.add('open');$('cartClose').focus();}
+function close(){drawer.classList.remove('open');overlay.classList.remove('open');$('cartTrigger').focus();}
+function change(id,delta){const x=cart.find(x=>x.id===id);if(!x)return;x.quantity+=delta;if(x.quantity<=0)cart=cart.filter(x=>x.id!==id);save();}
+document.querySelectorAll('.quick-add').forEach(btn=>btn.addEventListener('click',()=>{
+ const p=CATALOG[btn.dataset.id];if(!p)return;
+ const x=cart.find(x=>x.id===p.id);if(x)x.quantity++;else cart.push({...p,quantity:1});save();
+ btn.textContent='✓';setTimeout(()=>btn.textContent='🛒+',900);
+ toast.textContent='✓ '+p.name+' agregado al carrito';toast.classList.add('show');setTimeout(()=>toast.classList.remove('show'),1800);
+}));
+$('cartTrigger').addEventListener('click',open);$('cartClose').addEventListener('click',close);overlay.addEventListener('click',close);
+window.addEventListener('keydown',e=>{if(e.key==='Escape'&&drawer.classList.contains('open'))close();});
+items.addEventListener('click',e=>{const b=e.target.closest('button[data-act]');if(!b)return;const id=b.dataset.id;if(b.dataset.act==='remove'){cart=cart.filter(x=>x.id!==id);save();}else change(id,b.dataset.act==='plus'?1:-1);});
+render();
+})();</script>
+<script>
+(function(){
+ const track=document.getElementById('reviewsTrack');
+ const dotsWrap=document.getElementById('reviewDots');
+ if(!track||!dotsWrap) return;
+ const slides=[...track.children];
+ let index=0, timer;
+ slides.forEach((_,i)=>{
+   const b=document.createElement('button');
+   b.className='review-dot'+(i===0?' active':'');
+   b.type='button'; b.setAttribute('aria-label','Ver experiencia '+(i+1));
+   b.addEventListener('click',()=>go(i,true));
+   dotsWrap.appendChild(b);
+ });
+ const dots=[...dotsWrap.children];
+ function go(i,manual){
+   index=(i+slides.length)%slides.length;
+   track.style.transform='translateX(-'+(index*100)+'%)';
+   dots.forEach((d,j)=>d.classList.toggle('active',j===index));
+   if(manual) restart();
+ }
+ function restart(){clearInterval(timer);timer=setInterval(()=>go(index+1,false),5200)}
+ document.querySelector('.review-prev')?.addEventListener('click',()=>go(index-1,true));
+ document.querySelector('.review-next')?.addEventListener('click',()=>go(index+1,true));
+ const win=document.querySelector('.reviews-window');
+ win?.addEventListener('mouseenter',()=>clearInterval(timer));
+ win?.addEventListener('mouseleave',restart);
+ restart();
+})();
+</script>
+</body></html>
