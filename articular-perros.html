@@ -46,11 +46,61 @@ src="https://www.facebook.com/tr?id=1759693591926781&ev=PageView&noscript=1"
     "url": "https://octapet.com.mx/articular-perros.html",
     "image": "https://octapet.com.mx/img/hero-articular-octapet.jpg",
     "offers": {
-      "@type": "Offer",
-      "priceCurrency": "MXN",
-      "price": "499.00",
-      "availability": "https://schema.org/InStock",
-      "url": "https://octapet.com.mx/comprar.html"
+  "@type": "Offer",
+  "priceCurrency": "MXN",
+  "price": "499.00",
+  "availability": "https://schema.org/InStock",
+  "url": "https://octapet.com.mx/comprar.html",
+  "shippingDetails": [
+    {
+      "@type": "OfferShippingDetails",
+      "shippingDestination": {
+        "@type": "DefinedRegion",
+        "addressCountry": "MX"
+      },
+      "shippingRate": {
+        "@type": "MonetaryAmount",
+        "value": "130.00",
+        "currency": "MXN"
+      },
+      "deliveryTime": {
+        "@type": "ShippingDeliveryTime",
+        "transitTime": {
+          "@type": "QuantitativeValue",
+          "minValue": 2,
+          "maxValue": 5,
+          "unitCode": "DAY"
+        }
+      }
+    },
+    {
+      "@type": "OfferShippingDetails",
+      "shippingDestination": {
+        "@type": "DefinedRegion",
+        "addressCountry": "MX"
+      },
+      "shippingRate": {
+        "@type": "MonetaryAmount",
+        "value": "0",
+        "currency": "MXN"
+      },
+      "eligibleTransactionVolume": {
+        "@type": "PriceSpecification",
+        "price": "750.00",
+        "priceCurrency": "MXN"
+      },
+      "deliveryTime": {
+        "@type": "ShippingDeliveryTime",
+        "transitTime": {
+          "@type": "QuantitativeValue",
+          "minValue": 2,
+          "maxValue": 5,
+          "unitCode": "DAY"
+        }
+      }
+    }
+  ]
+}
     }
   }
   </script>
